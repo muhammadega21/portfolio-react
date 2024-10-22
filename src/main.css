@@ -1,0 +1,28 @@
+:root {
+  --dark-background: #28293e;
+  --light-background: #fdf0e9;
+  --color-primary: #ef6c57;
+  --text-accent: #ef6d58;
+  --text-dark: #391400;
+  --text-light: #fff;
+}
+
+h5 {
+  font-size: 16px;
+  color: var(--text-accent);
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+section[class*="dark"] {
+  background-color: var(--dark-background);
+  color: var(--text-light);
+}
+
+section[class*="light"] {
+  background-color: var(--light-background);
+  color: var(--text-dark);
+}
