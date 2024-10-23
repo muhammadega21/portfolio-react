@@ -17,12 +17,16 @@ h4 {
   font-size: 24px;
 }
 
-section[class*="dark"] {
+[class*="dark"] {
   background-color: var(--dark-background);
   color: var(--text-light);
 }
 
-section[class*="light"] {
+[class*="light"] {
   background-color: var(--light-background);
   color: var(--text-dark);
+}
+
+main{
+  padding-top: 70px;
 }

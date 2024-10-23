@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav>
+    <nav className="dark">
       <div className="logo">
         <Link to="/">
-          <img src="./icons/logo.svg" alt="Logo" />
+          <img src="./images/logo.png" alt="Logo" />
         </Link>
         <h4>Portfolio</h4>
       </div>
@@ -27,7 +27,7 @@ function Navbar() {
         </ul>
       </div>
       <div className="contact-btn">
-        <Link to="/contact">Contact</Link>
+        <Link to="/contact">CONTACT</Link>
       </div>
     </nav>
   );
