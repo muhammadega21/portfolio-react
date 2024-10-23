@@ -1,11 +1,8 @@
 nav {
-  height: 70px;
   width: 100%;
   position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10%;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
 }
 
 nav .logo {
@@ -14,30 +11,51 @@ nav .logo {
   gap: 10px;
 }
 
-nav .nav-link ul {
-  display: flex;
-  align-items: center;
-  gap: 5rem;
+nav .nav-link li a {
+  transition: 0.2s ease-in-out;
 }
 
-nav .nav-link li a{
-    transition: .2s ease-in-out;
+nav .nav-link li a:hover {
+  color: var(--text-accent);
 }
 
-nav .nav-link li a:hover{
-    color: var(--text-accent);
+nav .contact-btn a {
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #ffffff4b;
+  padding: 10px 25px;
+  border-radius: 6px;
+  transition: 0.2s ease-in-out;
 }
 
-nav .contact-btn a{
-    font-size: 14px;
-    font-weight: 600;
-    border: 1px solid #FFFFFF4B;
-    padding: 10px 25px;
-    border-radius: 6px;
-    transition: .2s ease-in-out;
+nav .contact-btn a:hover {
+  border: 1px solid var(--color-primary);
+  background: var(--color-primary);
 }
 
-nav .contact-btn a:hover{
-    border: 1px solid var(--color-primary);
-    background: var(--color-primary);
+.navMobile .nav-link li a {
+  padding: 10px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.navMobile .nav-link li a:hover {
+  color: #fff;
+  background: var(--color-primary);
+}
+
+.navMobile .menu {
+  cursor: pointer;
+  border: 1px solid #ffffff4b;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.navMobile .menu .svg-icon {
+  transition: 0.2s ease-in-out;
+}
+
+.navMobile .menu.open .svg-icon {
+  transform: rotate(180deg);
 }
