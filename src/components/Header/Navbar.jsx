@@ -4,10 +4,10 @@ import NavMobile from "./NavMobile";
 
 function Navbar() {
   return (
-    <>
+    <header>
       <NavWeb />
       <NavMobile />
-    </>
+    </header>
   );
 }
 
