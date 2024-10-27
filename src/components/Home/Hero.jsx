@@ -3,10 +3,13 @@ function Hero() {
     <div className=" dark flex flex-col-reverse md:flex-row items-center justify-center gap-5 md:justify-between h-full px-[5%] md:px-[10%]">
       <div className="hero-profile ">
         <h4 className="text-color-accent">Muhammad Ega Dermawan</h4>
-        <h1 className="leading-[50px] md:leading-[80px]">Web Programming</h1>
-        <p className="text-[#FFFFFFA3] my-6">
-          Menyediakan Layanan Jasa Pembuatan Aplikasi Berbasis Mobile Dengan
-          Kualitas Terbaik
+        <h1 className="leading-[50px] md:leading-[80px]">
+          Web
+          <br /> Programming
+        </h1>
+        <p className="text-[#FFFFFFA3] mt-3 md:mt-6 mb-6 w-full md:w-5/6">
+          Menyediakan Layanan Jasa Pembuatan Website dengan Desain Responsif dan
+          Fungsionalitas Tinggi untuk Meningkatkan Kenyamanan Pengguna.
         </p>
         <a
           href="#portfolio"
