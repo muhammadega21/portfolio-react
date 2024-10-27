@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
 function BackToTop({ top }) {
@@ -27,5 +28,9 @@ function BackToTop({ top }) {
     </div>
   );
 }
+
+BackToTop.propTypes = {
+  top: PropTypes.string.isRequired,
+};
 
 export default BackToTop;
