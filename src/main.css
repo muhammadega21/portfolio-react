@@ -27,6 +27,6 @@ h4 {
   color: var(--text-dark);
 }
 
-main{
-  padding-top: 70px;
+section {
+  height: 100dvh;
 }

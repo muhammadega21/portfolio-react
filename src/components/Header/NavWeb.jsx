@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 function NavWeb() {
   return (
-    <nav className="hidden md:flex justify-between items-center px-[10%] h-[70px] dark ">
+    <nav className="hidden md:flex justify-between items-center px-[10%] h-[70px]  dark">
       <div className="logo">
-        <Link to="/">
-          <img src="./images/logo.png" alt="Logo" />
-        </Link>
+        <img src="./images/logo.png" alt="Logo" />
         <h4>Portfolio</h4>
       </div>
       <div className="nav-link">
         <ul className="flex items-center gap-[2rem] lg:gap-[5rem]">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
           <li>
             <Link to="/about">About</Link>
           </li>

@@ -41,9 +41,7 @@ function NavMobile() {
     >
       <div className="logo py-3 justify-between">
         <div className="flex items-center gap-3">
-          <Link to="/">
-            <img src="./images/logo.png" alt="Logo" />
-          </Link>
+          <img src="./images/logo.png" alt="Logo" />
           <h4>Portfolio</h4>
         </div>
         <div
@@ -76,6 +74,9 @@ function NavMobile() {
       <div className="nav-link flex flex-col w-full">
         <ul className="w-full">
           <li>
+            <Link to="/" onClick={handleLinkClick}>
+              Home
+            </Link>
             <Link to="/about" onClick={handleLinkClick}>
               About
             </Link>

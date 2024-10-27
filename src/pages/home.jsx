@@ -1,5 +1,11 @@
+import { Hero } from "../components/Home";
+
 function Home() {
-  return "Halaman Home";
+  return (
+    <section>
+      <Hero />
+    </section>
+  );
 }
 
 export default Home;
