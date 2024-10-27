@@ -2,13 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-}
-
 @layer base {
   h1 {
-    @apply text-[40px] md:text-[72px] font-extrabold ;
+    @apply text-[40px] md:text-[72px] font-extrabold;
   }
   h2 {
     @apply text-[40px] md:text-[56px] font-extrabold;

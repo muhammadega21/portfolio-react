@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 function NavWeb() {
   return (
     <nav className="hidden md:flex justify-between items-center px-[10%] h-[70px]  dark">
@@ -9,24 +8,24 @@ function NavWeb() {
       <div className="nav-link">
         <ul className="flex items-center gap-[2rem] lg:gap-[5rem]">
           <li>
-            <Link to="/">Home</Link>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <a href="#about">About</a>
           </li>
           <li>
-            <Link to="/layanan">Layanan</Link>
+            <a href="#layanan">Layanan</a>
           </li>
           <li>
-            <Link to="/portfolio">Portfolio</Link>
+            <a href="#portfolio">Portfolio</a>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
+            <a href="#blog">Blog</a>
           </li>
         </ul>
       </div>
       <div className="contact-btn">
-        <Link to="/contact">CONTACT</Link>
+        <a href="#contact">CONTACT</a>
       </div>
     </nav>
   );

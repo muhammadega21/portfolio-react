@@ -7,6 +7,10 @@
   --text-light: #fff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h5 {
   font-size: 16px;
   color: var(--text-accent);
@@ -25,6 +29,40 @@ h4 {
 [class*="light"] {
   background-color: var(--light-background);
   color: var(--text-dark);
+}
+
+.back-to-top {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top a {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  border: 1px solid var(--text-accent);
+  border-radius: 50%;
+  background: var(--color-primary);
+  fill: transparent;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.back-to-top a:hover {
+  opacity: 0.85;
 }
 
 section {

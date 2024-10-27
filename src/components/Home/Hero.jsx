@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 function Hero() {
   return (
     <div className=" dark flex flex-col-reverse md:flex-row items-center justify-center gap-5 md:justify-between h-full px-[5%] md:px-[10%]">
@@ -10,12 +8,12 @@ function Hero() {
           Menyediakan Layanan Jasa Pembuatan Aplikasi Berbasis Mobile Dengan
           Kualitas Terbaik
         </p>
-        <Link
-          to="/portfolio"
-          className="bg-color-accent py-3 px-5 rounded-md text-sm font-extrabold"
+        <a
+          href="#portfolio"
+          className="bg-color-accent py-3 px-5 rounded-md text-sm font-bold hover:opacity-85 transition-opacity ease-in-out duration-300"
         >
           Lihat Portfolio
-        </Link>
+        </a>
       </div>
       <div className="hero-img ">
         <img

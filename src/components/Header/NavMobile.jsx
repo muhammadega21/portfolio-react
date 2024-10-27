@@ -74,32 +74,32 @@ function NavMobile() {
       <div className="nav-link flex flex-col w-full">
         <ul className="w-full">
           <li>
-            <Link to="/" onClick={handleLinkClick}>
+            <a href="#home" onClick={handleLinkClick}>
               Home
-            </Link>
-            <Link to="/about" onClick={handleLinkClick}>
+            </a>
+            <a href="#about" onClick={handleLinkClick}>
               About
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/layanan" onClick={handleLinkClick}>
+            <a href="#layanan" onClick={handleLinkClick}>
               Layanan
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/portfolio" onClick={handleLinkClick}>
+            <a href="#portfolio" onClick={handleLinkClick}>
               Portfolio
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/blog" onClick={handleLinkClick}>
+            <a href="#blog" onClick={handleLinkClick}>
               Blog
-            </Link>
+            </a>
           </li>
         </ul>
         <div className="contact-btn my-3 w-full">
           <Link
-            to="/contact"
+            href="#contact"
             className="w-full block text-center"
             onClick={handleLinkClick}
           >
