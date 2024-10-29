@@ -9,7 +9,7 @@ function Hero() {
         </h1>
         <p className="text-[#FFFFFFA3] mt-3 md:mt-6 mb-6 w-full md:w-5/6">
           Menyediakan Layanan Jasa Pembuatan Website dengan Desain Responsif dan
-          Fungsionalitas Tinggi untuk Meningkatkan Kenyamanan Pengguna.
+          Fungsionalitas Tinggi.
         </p>
         <a
           href="#portfolio"

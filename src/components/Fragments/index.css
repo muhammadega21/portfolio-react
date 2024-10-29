@@ -1,0 +1,25 @@
+.list-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 1rem;
+  padding: 15px 25px;
+}
+
+.list-wrapper:not(:first-child) {
+  border-left: 1px solid #f3d1bf;
+}
+
+.list-wrapper .icon {
+  background: var(--color-primary);
+  padding: 13px 12px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  min-width: 48px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

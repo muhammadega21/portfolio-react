@@ -9,4 +9,7 @@
   h2 {
     @apply text-[40px] md:text-[56px] font-extrabold;
   }
+  h3 {
+    @apply text-[30px] md:text-[40px] font-extrabold;
+  }
 }

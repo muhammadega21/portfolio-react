@@ -66,5 +66,6 @@ h4 {
 }
 
 section {
-  height: 100dvh;
+  height: 100%;
+  min-height: 100lvh;
 }
