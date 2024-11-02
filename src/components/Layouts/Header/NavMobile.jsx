@@ -74,6 +74,11 @@ function NavMobile() {
       <div className="nav-link flex flex-col w-full">
         <ul className="w-full">
           <li>
+            <Link to={"/about"} onClick={handleLinkClick}>
+              About
+            </Link>
+          </li>
+          <li>
             <Link to={"/layanan"} onClick={handleLinkClick}>
               Layanan
             </Link>
@@ -81,11 +86,6 @@ function NavMobile() {
           <li>
             <Link to={"/portfolio"} onClick={handleLinkClick}>
               Portfolio
-            </Link>
-          </li>
-          <li>
-            <Link to={"/about"} onClick={handleLinkClick}>
-              About
             </Link>
           </li>
           <li>
