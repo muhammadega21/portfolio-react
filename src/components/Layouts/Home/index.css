@@ -1,0 +1,27 @@
+.project-list {
+  padding: 15px;
+  border: 1px solid #9b9b9b;
+  border-right: 0px;
+}
+.project-list:first-child {
+  border-left: 0px;
+}
+
+.project-list .img {
+  position: relative;
+}
+
+.project-list .project-desc {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  line-height: 45px;
+}
+
+.project-list .project-desc p {
+  display: inline;
+  background: #fff;
+  border-radius: 40px;
+  padding: 4px 12px;
+  color: var(--text-dark);
+}
