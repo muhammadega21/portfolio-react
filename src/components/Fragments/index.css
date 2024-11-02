@@ -4,11 +4,7 @@
   height: 100%;
   width: 100%;
   gap: 1rem;
-  padding: 15px 25px;
-}
-
-.list-wrapper:not(:first-child) {
-  border-left: 1px solid #f3d1bf;
+  padding: 2rem 3rem;
 }
 
 .list-wrapper .icon {
@@ -17,9 +13,55 @@
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  min-width: 48px;
-  min-height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.list-wrapper .icon img {
+  width: 48px;
+  height: 48px;
+}
+
+.list-wrapper.layanan {
+  align-items: start;
+  flex-direction: column;
+}
+
+.list-wrapper.layanan .icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.list-wrapper.layanan .icon {
+  width: 80px;
+  height: 80px;
+}
+
+.list-wrapper.layanan .icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.list-wrapper.layanan p {
+  margin: 1rem 0px;
+}
+
+.list-wrapper.layanan .more {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.list-wrapper.layanan .more .icon {
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  box-shadow: 0px 3px 9px 0px #39140014;
+}
+
+.list-wrapper.layanan .more img {
+  width: 12px;
+  height: 12px;
 }

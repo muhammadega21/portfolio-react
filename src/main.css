@@ -12,13 +12,13 @@ html {
 }
 
 h5 {
-  font-size: 16px;
-  color: var(--text-accent);
+  font-size: 16px !important;
+  color: var(--text-accent) !important;
 }
 
 h4 {
-  font-weight: 700;
-  font-size: 24px;
+  font-weight: 700 !important;
+  font-size: 24px !important;
 }
 
 [class*="dark"] {

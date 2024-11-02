@@ -12,4 +12,8 @@
   h3 {
     @apply text-[30px] md:text-[40px] font-extrabold;
   }
+
+  .list-wrapper:not(:first-child) {
+    @apply border-l-0 md:border-l border-t md:border-t-0 border-[#f3d1bf];
+  }
 }

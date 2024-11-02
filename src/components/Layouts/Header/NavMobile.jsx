@@ -40,10 +40,10 @@ function NavMobile() {
       }] navMobile flex flex-col md:hidden px-[5%] dark`}
     >
       <div className="logo py-3 justify-between">
-        <div className="flex items-center gap-3">
+        <Link to={"/"} className="flex items-center gap-3">
           <img src="./images/logo.png" alt="Logo" />
           <h4>Portfolio</h4>
-        </div>
+        </Link>
         <div
           className={`menu ${open ? "open" : "close"}`}
           onClick={handleClick}
@@ -74,27 +74,24 @@ function NavMobile() {
       <div className="nav-link flex flex-col w-full">
         <ul className="w-full">
           <li>
-            <a href="#home" onClick={handleLinkClick}>
-              Home
-            </a>
-            <a href="#about" onClick={handleLinkClick}>
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#layanan" onClick={handleLinkClick}>
+            <Link to={"/layanan"} onClick={handleLinkClick}>
               Layanan
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#portfolio" onClick={handleLinkClick}>
+            <Link to={"/portfolio"} onClick={handleLinkClick}>
               Portfolio
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#blog" onClick={handleLinkClick}>
+            <Link to={"/about"} onClick={handleLinkClick}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to={"/blog"} onClick={handleLinkClick}>
               Blog
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="contact-btn my-3 w-full">

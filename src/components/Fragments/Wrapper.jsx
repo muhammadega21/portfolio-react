@@ -11,7 +11,7 @@ function Wrapper({ children }) {
 function WrapperAbout() {
   return (
     <Wrapper>
-      <div className="list-wrapper ">
+      <div className="list-wrapper about">
         <div className="icon">
           <img src="./icons/callendar-check.svg" alt="callendar-check" />
         </div>
@@ -20,7 +20,7 @@ function WrapperAbout() {
           <p>Pengalaman Kerja</p>
         </div>
       </div>
-      <div className="list-wrapper">
+      <div className="list-wrapper about">
         <div className="icon">
           <img src="./icons/bag.svg" alt="" />
         </div>
@@ -36,7 +36,42 @@ function WrapperAbout() {
 function WrapperLayanan() {
   return (
     <Wrapper>
-      <h4>Wrapper Layanan</h4>
+      <div className="list-wrapper layanan p-[2rem_1.5rem] md:p-[2rem_3rem]">
+        <div className="icon-wrapper">
+          <div className="icon">
+            <img src="./icons/laptop.svg" alt="laptop" />
+          </div>
+          <h4>Laravel</h4>
+        </div>
+        <p>
+          Mengembangkan website menggunakan Laravel versi terbaru dengan
+          struktur codingan yang rapi dan keamanan aplikasi terjamin
+        </p>
+        <div className="more">
+          <div className="icon">
+            <img src="./icons/plus.svg" alt="plus" />
+          </div>
+          <span>Learn More</span>
+        </div>
+      </div>
+      <div className="list-wrapper layanan p-[2rem_1.5rem] md:p-[2rem_3rem]">
+        <div className="icon-wrapper">
+          <div className="icon">
+            <img src="./icons/bag.svg" alt="bag" />
+          </div>
+          <h4>React JS</h4>
+        </div>
+        <p>
+          Mengembangkan website menggunakan React JS versi terbaru dengan
+          struktur codingan yang rapi dan keamanan aplikasi terjamin
+        </p>
+        <div className="more">
+          <div className="icon">
+            <img src="./icons/plus.svg" alt="plus" />
+          </div>
+          <span>Learn More</span>
+        </div>
+      </div>
     </Wrapper>
   );
 }
