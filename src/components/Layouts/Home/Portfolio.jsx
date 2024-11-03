@@ -9,7 +9,7 @@ function Portfolio() {
         </div>
         <Link
           to={"/portfolio"}
-          className="border border-[#FFFFFF4B] px-5 py-2 rounded hover:bg-white hover:text-color-dark transition ease-in-out duration-100"
+          className="border border-[#FFFFFF4B] px-5 py-2 rounded hover:bg-white hover:text-color-dark transition ease-in-out duration-300"
         >
           LEBIH LANJUT
         </Link>
