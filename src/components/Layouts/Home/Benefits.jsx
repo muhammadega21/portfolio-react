@@ -1,17 +1,21 @@
 function Benefits() {
   return (
-    <div>
-      <div>
+    <div className="benefit flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-[5%] md:px-[10%]">
+      <div className="w-full md:w-4/5">
         <h5>Keuntungan</h5>
-        <h2>Website Anda Menjadi Lebih Menarik</h2>
-        <p>Memiliki programmer yang ber pengalaman dan berpendidikan</p>
+        <h2 className="leading-[50px] md:leading-[60px]">
+          Website Anda Menjadi Lebih Menarik
+        </h2>
+        <p className="my-5">
+          Memiliki programmer yang berpengalaman dan berpendidikan
+        </p>
         <ul>
           <li>Modern Desain Web App</li>
           <li>Kodingan Terstruktur</li>
           <li>Keamanan Terjamin</li>
         </ul>
       </div>
-      <div className="img">
+      <div className="img ">
         <img src="./images/image-2.png" alt="image-2" />
       </div>
     </div>
