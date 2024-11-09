@@ -20,4 +20,8 @@
   .project-list:not(:first-child) {
     @apply border-t-0 md:border-t;
   }
+
+  .card.card-hero h4 {
+    @apply !text-[24px] md:!text-[40px];
+  }
 }

@@ -1,5 +1,11 @@
 import BackToTop from "../components/Elements/BackToTop";
-import { Hero, About, Layanan, Benefits } from "../components/Layouts/Home";
+import {
+  Hero,
+  About,
+  Layanan,
+  Benefits,
+  Blog,
+} from "../components/Layouts/Home";
 import Portfolio from "../components/Layouts/Home/Portfolio";
 
 function Home() {
@@ -20,6 +26,9 @@ function Home() {
       </section>
       <section className="dark py-10 grid place-items-center">
         <Benefits />
+      </section>
+      <section className="light py-10">
+        <Blog />
       </section>
     </>
   );
