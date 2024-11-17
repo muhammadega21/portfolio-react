@@ -45,14 +45,6 @@
   width: 14px;
 }
 
-/* .benefit ul li::before {
-  content: url("./icons/check.svg");
-  padding: 4px 5px;
-  border-radius: 100%;
-  background-color: var(--color-primary);
-  margin-right: 10px;
-} */
-
 .articles .card .card-body {
   margin-top: 1rem;
 }

@@ -5,6 +5,7 @@ import {
   Layanan,
   Benefits,
   Blog,
+  Contact,
 } from "../components/Layouts/Home";
 import Portfolio from "../components/Layouts/Home/Portfolio";
 
@@ -29,6 +30,9 @@ function Home() {
       </section>
       <section className="light py-10 grid place-items-center">
         <Blog />
+      </section>
+      <section className="dark py-10 grid place-items-center">
+        <Contact />
       </section>
     </>
   );
