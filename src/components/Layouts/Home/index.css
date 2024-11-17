@@ -38,3 +38,25 @@
   background-color: var(--color-primary);
   margin-right: 10px;
 }
+
+.articles .card .card-body {
+  margin-top: 1rem;
+}
+
+.articles .card .card-body h4 {
+  margin: 10px 0;
+}
+
+.articles .card .card-body span {
+  font-size: 16px;
+  color: #391400a3;
+}
+
+.articles .card:not(.card-hero) {
+  font-size: 24px !important;
+  margin-bottom: 2rem;
+}
+
+.articles .card:not(.card-hero) img {
+  width: 100%;
+}

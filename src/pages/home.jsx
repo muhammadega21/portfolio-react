@@ -27,7 +27,7 @@ function Home() {
       <section className="dark py-10 grid place-items-center">
         <Benefits />
       </section>
-      <section className="light py-10">
+      <section className="light py-10 grid place-items-center">
         <Blog />
       </section>
     </>
