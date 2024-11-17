@@ -10,9 +10,24 @@ function Benefits() {
           Memiliki programmer yang berpengalaman dan berpendidikan
         </p>
         <ul>
-          <li>Modern Desain Web App</li>
-          <li>Kodingan Terstruktur</li>
-          <li>Keamanan Terjamin</li>
+          <li>
+            <div className="benefit-icon">
+              <img src="./icons/check.svg" alt="check" />
+            </div>
+            Modern Desain Web App
+          </li>
+          <li>
+            <div className="benefit-icon">
+              <img src="./icons/check.svg" alt="check" />
+            </div>
+            Kodingan Terstruktur
+          </li>
+          <li>
+            <div className="benefit-icon">
+              <img src="./icons/check.svg" alt="check" />
+            </div>
+            Keamanan Terjamin
+          </li>
         </ul>
       </div>
       <div className="img ">
