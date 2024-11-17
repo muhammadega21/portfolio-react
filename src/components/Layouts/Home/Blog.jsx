@@ -51,23 +51,21 @@ function Blog() {
         </div>
       </div>
       <div className="h-[1px] w-full bg-[#F3D1BF]"></div>
-      <div className="form-input my-10">
-        <form
-          action=""
-          className="flex gap-x-6 gap-y-3 justify-end items-center flex-col md:flex-row"
-        >
-          <input
-            type="email"
-            name="email"
-            id="email"
-            className="max-w-[370px] w-full py-2 px-4 outline-none border border-[#F3D1BF] rounded-md"
-            placeholder="Email Anda"
-          />
-          <button className="px-8 py-2 w-full md:w-auto bg-white text-color-dark font-bold shadow-[0_3px_9px_#39140014] rounded-md hover:opacity-80 transition">
-            KIRIM
-          </button>
-        </form>
-      </div>
+      <form
+        action=""
+        className="flex my-10 gap-x-6 gap-y-3 justify-end items-center flex-col md:flex-row"
+      >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          className="max-w-[370px] w-full py-2 px-4 outline-none border border-[#F3D1BF] rounded-md"
+          placeholder="Email Anda"
+        />
+        <button className="px-8 py-2 w-full md:w-auto bg-white text-color-dark font-bold shadow-[0_3px_9px_#39140014] rounded-md hover:opacity-80 transition">
+          KIRIM
+        </button>
+      </form>
     </div>
   );
 }

@@ -66,3 +66,51 @@
 .articles .card:not(.card-hero) img {
   width: 100%;
 }
+
+.contact-wrapper .suggestion form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem 0;
+}
+
+.contact-wrapper .suggestion form input,
+.contact-wrapper .suggestion form select,
+.contact-wrapper .suggestion form textarea {
+  border: none;
+  color: #3914008f;
+  border: 1px solid #f3d1bf;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.contact-wrapper .suggestion form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='salmon' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 10px);
+  background-position-y: 50%;
+}
+
+.contact-wrapper .contact .contact-link {
+  margin-top: 2rem;
+}
+.contact-wrapper .contact .contact-link li {
+  display: flex;
+  align-items: center;
+  gap: 0 0.8rem;
+  margin: 1rem 0;
+}
+
+.contact-wrapper .contact .contact-link li .contact-icon {
+  background: var(--color-primary);
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.contact-wrapper .contact .contact-link li .contact-icon img {
+  width: 18px;
+}
