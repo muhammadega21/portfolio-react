@@ -73,6 +73,8 @@ function Blog() {
       <form
         action=""
         className="flex my-10 gap-x-6 gap-y-3 justify-end items-center flex-col md:flex-row"
+        data-aos="fade-up"
+        data-aos-duration="500"
       >
         <input
           type="email"
