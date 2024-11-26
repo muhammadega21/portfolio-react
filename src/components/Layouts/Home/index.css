@@ -114,3 +114,21 @@
 .contact-wrapper .contact .contact-link li .contact-icon img {
   width: 18px;
 }
+
+.footer-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.footer-wrapper .footer-socialMedia .social-wrapper {
+  background: var(--color-primary);
+  height: 48px;
+  width: 48px;
+  border-radius: 100%;
+}
+
+.footer-wrapper .footer-socialMedia .social-wrapper a {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}

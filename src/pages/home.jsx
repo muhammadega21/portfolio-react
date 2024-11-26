@@ -1,4 +1,5 @@
 import BackToTop from "../components/Elements/BackToTop";
+import Footer from "../components/Layouts/Footer";
 import {
   Hero,
   About,
@@ -34,6 +35,9 @@ function Home() {
       <section className="dark py-10 grid place-items-center">
         <Contact />
       </section>
+      <div className="dark py-10 grid place-items-center">
+        <Footer />
+      </div>
     </>
   );
 }
