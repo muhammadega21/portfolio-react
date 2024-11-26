@@ -1,7 +1,11 @@
 function Benefits() {
   return (
     <div className="benefit flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-[5%] md:px-[10%]">
-      <div className="w-full md:w-4/5">
+      <div
+        className="w-full md:w-4/5"
+        data-aos="fade-up"
+        data-aos-duration="500"
+      >
         <h5>Keuntungan</h5>
         <h2 className="leading-[50px] md:leading-[60px]">
           Website Anda Menjadi Lebih Menarik
@@ -30,7 +34,12 @@ function Benefits() {
           </li>
         </ul>
       </div>
-      <div className="img ">
+      <div
+        className="img"
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-delay="100"
+      >
         <img src="./images/image-2.png" alt="image-2" />
       </div>
     </div>

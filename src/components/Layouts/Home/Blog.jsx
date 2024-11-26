@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
+
+const fadeUp = { "data-aos": "fade-up", "data-aos-duration": "500" };
+
 function Blog() {
   return (
     <div className="px-[5%] md:px-[10%] ">
-      <h5>BLOG SAYA</h5>
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-y-4 my-4">
+      <h5 {...fadeUp}>BLOG SAYA</h5>
+      <div
+        className="flex flex-col md:flex-row items-start md:items-center justify-between gap-y-4 my-4"
+        {...fadeUp}
+      >
         <h2 className="leading-[48px] md:leading-[68px]">
           Artikel Blog
           <br />
@@ -17,7 +23,10 @@ function Blog() {
         </Link>
       </div>
       <div className="articles mt-10 flex flex-col md:flex-row justify-between gap-8">
-        <div className="card card-hero w-full min-w-0 md:min-w-[770px] pe-0 md:pe-16">
+        <div
+          className="card card-hero w-full min-w-0 md:min-w-[770px] pe-0 md:pe-16"
+          {...fadeUp}
+        >
           <div className="card-head">
             <img src="images/blog-1.png" alt="blog-1" />
           </div>
@@ -28,7 +37,12 @@ function Blog() {
           </div>
         </div>
         <div>
-          <div className="card">
+          <div
+            className="card"
+            data-aos="fade-up"
+            data-aos-duration="600"
+            data-aos-delay="100"
+          >
             <div className="card-head">
               <img src="images/blog-2.png" alt="blog-2" />
             </div>
@@ -38,7 +52,12 @@ function Blog() {
               <span>5 Nov, 2021</span>
             </div>
           </div>
-          <div className="card">
+          <div
+            className="card"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-delay="100"
+          >
             <div className="card-head">
               <img src="images/blog-3.png" alt="blog-3" />
             </div>

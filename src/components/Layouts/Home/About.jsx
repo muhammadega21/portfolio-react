@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
 import { WrapperAbout } from "../../Fragments/Wrapper";
 
+const fadeUp = { "data-aos": "fade-up", "data-aos-duration": "500" };
+const fadeLeft = { "data-aos": "fade-left", "data-aos-duration": "500" };
+const fadeRight = { "data-aos": "fade-right", "data-aos-duration": "500" };
+
 function About() {
   return (
     <div className="flex flex-col justify-center items-center h-full w-full px-[5%] md:px-[10%] py-[2rem]">
       <div className=" w-full flex flex-col md:flex-row items-center justify-center md:justify-between gap-y-8">
-        <div className="w-full md:w-[40%] ">
+        <div className="w-full md:w-[40%] " {...fadeRight}>
           <img src="./images/image-1.png" alt="image1" className=" " />
         </div>
-        <div className="about-profile w-full md:w-[50%]">
+        <div className="about-profile w-full md:w-[50%]" {...fadeLeft}>
           <h4>Muhammad Ega Dermawan</h4>
           <h2 className="leading-[50px] md:leading-[64px] mb-5">
             Professional
@@ -28,7 +32,7 @@ function About() {
           </Link>
         </div>
       </div>
-      <div className="mt-8">
+      <div className="mt-8" {...fadeUp}>
         <WrapperAbout />
       </div>
     </div>

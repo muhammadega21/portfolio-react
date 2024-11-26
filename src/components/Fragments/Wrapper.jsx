@@ -1,5 +1,7 @@
 import { PropTypes } from "prop-types";
 import "./index.css";
+
+const fadeUp = { "data-aos": "fade-up", "data-aos-duration": "500" };
 function Wrapper({ children }) {
   return (
     <div className="flex flex-col md:flex-row items-center border border-[#f3d1bf] rounded-[6px]">
@@ -37,17 +39,17 @@ function WrapperLayanan() {
   return (
     <Wrapper>
       <div className="list-wrapper layanan p-[2rem_1.5rem] md:p-[2rem_3rem]">
-        <div className="icon-wrapper">
+        <div className="icon-wrapper" {...fadeUp}>
           <div className="icon">
             <img src="./icons/laptop.svg" alt="laptop" />
           </div>
           <h4>Laravel</h4>
         </div>
-        <p>
+        <p {...fadeUp} data-aos-delay="100">
           Mengembangkan website menggunakan Laravel versi terbaru dengan
           struktur codingan yang rapi dan keamanan aplikasi terjamin
         </p>
-        <div className="more">
+        <div className="more" {...fadeUp} data-aos-delay="100">
           <div className="icon">
             <img src="./icons/plus.svg" alt="plus" />
           </div>
@@ -55,17 +57,17 @@ function WrapperLayanan() {
         </div>
       </div>
       <div className="list-wrapper layanan p-[2rem_1.5rem] md:p-[2rem_3rem]">
-        <div className="icon-wrapper">
+        <div className="icon-wrapper" {...fadeUp}>
           <div className="icon">
             <img src="./icons/bag.svg" alt="bag" />
           </div>
           <h4>React JS</h4>
         </div>
-        <p>
+        <p {...fadeUp} data-aos-delay="100">
           Mengembangkan website menggunakan React JS versi terbaru dengan
           struktur codingan yang rapi dan keamanan aplikasi terjamin
         </p>
-        <div className="more">
+        <div className="more" {...fadeUp} data-aos-delay="100">
           <div className="icon">
             <img src="./icons/plus.svg" alt="plus" />
           </div>

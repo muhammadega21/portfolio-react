@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BackToTop from "../components/Elements/BackToTop";
 import Footer from "../components/Layouts/Footer";
 import {
@@ -9,8 +10,13 @@ import {
   Contact,
 } from "../components/Layouts/Home";
 import Portfolio from "../components/Layouts/Home/Portfolio";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <BackToTop top="home" />

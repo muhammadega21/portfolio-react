@@ -1,7 +1,7 @@
 function Hero() {
   return (
     <div className=" dark flex flex-col-reverse md:flex-row items-center justify-center gap-5 md:justify-between h-full px-[5%] md:px-[10%]">
-      <div className="hero-profile ">
+      <div className="hero-profile" data-aos="fade-up" data-aos-duration="600">
         <h4 className="text-color-accent">Muhammad Ega Dermawan</h4>
         <h1 className="leading-[50px] md:leading-[80px]">
           Web
@@ -18,7 +18,7 @@ function Hero() {
           Lihat Portfolio
         </a>
       </div>
-      <div className="hero-img ">
+      <div className="hero-img" data-aos="fade-up" data-aos-duration="600">
         <img
           src="./images/banner.png"
           alt="Hero"
