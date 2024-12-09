@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 function NavMobile() {
   const [open, setOpen] = useState(false);
   const navRef = useRef();
@@ -40,10 +40,10 @@ function NavMobile() {
       }] navMobile flex flex-col md:hidden px-[5%] dark`}
     >
       <div className="logo py-3 justify-between">
-        <Link to={"/"} className="flex items-center gap-3">
+        <NavLink to={"/"} className="flex items-center gap-3">
           <img src="./images/logo.png" alt="Logo" />
           <h4>Portfolio</h4>
-        </Link>
+        </NavLink>
         <div
           className={`menu ${open ? "open" : "close"}`}
           onClick={handleClick}
@@ -74,34 +74,34 @@ function NavMobile() {
       <div className="nav-link flex flex-col w-full">
         <ul className="w-full">
           <li>
-            <Link to={"/about"} onClick={handleLinkClick}>
+            <NavLink to={"/about"} onClick={handleLinkClick}>
               About
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to={"/layanan"} onClick={handleLinkClick}>
+            <NavLink to={"/layanan"} onClick={handleLinkClick}>
               Layanan
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to={"/portfolio"} onClick={handleLinkClick}>
+            <NavLink to={"/portfolio"} onClick={handleLinkClick}>
               Portfolio
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to={"/blog"} onClick={handleLinkClick}>
+            <NavLink to={"/blog"} onClick={handleLinkClick}>
               Blog
-            </Link>
+            </NavLink>
           </li>
         </ul>
         <div className="contact-btn my-3 w-full">
-          <Link
-            href="#contact"
+          <NavLink
+            to={"/contact"}
             className="w-full block text-center"
             onClick={handleLinkClick}
           >
             CONTACT
-          </Link>
+          </NavLink>
         </div>
       </div>
     </nav>

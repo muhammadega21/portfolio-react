@@ -1,0 +1,29 @@
+section:not(.home) {
+  height: 100%;
+  min-height: 0 !important;
+}
+
+.hero-head {
+  padding: 1.5rem 0 0 0;
+}
+
+.hero {
+  background-color: var(--dark-background);
+  text-align: center;
+  padding: 4rem 1rem;
+  color: white;
+}
+
+.hero p {
+  color: #ffffffa3;
+}
+
+.hero-body {
+  padding: 2rem 6%;
+}
+
+@media (min-width: 640px) {
+  .hero-body {
+    padding: 3.5rem 10%;
+  }
+}

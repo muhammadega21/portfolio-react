@@ -2,7 +2,7 @@ nav {
   width: 100%;
   position: absolute;
   overflow: hidden;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 nav .logo {
@@ -15,7 +15,8 @@ nav .nav-link li a {
   transition: 0.2s ease-in-out;
 }
 
-nav .nav-link li a:hover {
+nav .nav-link li a:hover,
+nav .nav-link a.active {
   color: var(--text-accent);
 }
 
@@ -28,7 +29,8 @@ nav .contact-btn a {
   transition: 0.2s ease-in-out;
 }
 
-nav .contact-btn a:hover {
+nav .contact-btn a:hover,
+nav .contact-btn a.active {
   border: 1px solid var(--color-primary);
   background: var(--color-primary);
 }
@@ -40,7 +42,9 @@ nav .contact-btn a:hover {
   text-align: center;
 }
 
-.navMobile .nav-link li a:hover {
+.navMobile .nav-link li a:hover,
+.navMobile .nav-link li a.active,
+.navMobile .contact-btn a.active {
   color: #fff;
   background: var(--color-primary);
 }

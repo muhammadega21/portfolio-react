@@ -11,6 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: var(--light-background);
+}
+
 h5 {
   font-size: 16px !important;
   color: var(--text-accent) !important;

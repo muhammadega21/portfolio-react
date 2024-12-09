@@ -1,30 +1,30 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NavWeb() {
   return (
     <nav className="hidden md:flex justify-between items-center px-[10%] h-[70px]  dark">
-      <Link to={"/"} className="logo">
+      <NavLink to={"/"} className="logo">
         <img src="./images/logo.png" alt="Logo" />
         <h4>Portfolio</h4>
-      </Link>
+      </NavLink>
       <div className="nav-link">
         <ul className="flex items-center gap-[2rem] lg:gap-[5rem]">
           <li>
-            <Link to={"/about"}>About</Link>
+            <NavLink to={"/about"}>About</NavLink>
           </li>
           <li>
-            <Link to={"/layanan"}>Layanan</Link>
+            <NavLink to={"/layanan"}>Layanan</NavLink>
           </li>
           <li>
-            <Link to={"/portfolio"}>Portfolio</Link>
+            <NavLink to={"/portfolio"}>Portfolio</NavLink>
           </li>
           <li>
-            <Link to={"/blog"}>Blog</Link>
+            <NavLink to={"/blog"}>Blog</NavLink>
           </li>
         </ul>
       </div>
       <div className="contact-btn">
-        <Link to={"/contact"}>CONTACT</Link>
+        <NavLink to={"/contact"}>CONTACT</NavLink>
       </div>
     </nav>
   );
