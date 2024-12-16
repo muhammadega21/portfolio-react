@@ -26,15 +26,17 @@ function About() {
           <div className="img">
             <img src="images/about-hero.png" alt="about-hero.png" />
           </div>
-          <div className="py-10">
+          <div className="py-10 w-full md:w-1/2 mx-auto">
             <h5>Muhammad Ega Dermawan</h5>
-            <h2>Professional Web Programming</h2>
-            <p>
+            <h2 className="leading-[45px] md:leading-[60px] my-4 mb-5">
+              Professional Web Programming
+            </h2>
+            <p className="mt-4">
               Ability to put themselves in the merchant's shoes. It is meant to
               partner on the long run, and work as an extension of the
               merchant's team.
             </p>
-            <p>
+            <p className="mt-4">
               A digital agency is a business you hire to outsource your digital
               marketing efforts, instead of handling in-house. They can provide
               your business with a variety of digital solutions to promote your
