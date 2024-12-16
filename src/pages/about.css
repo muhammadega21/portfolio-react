@@ -3,3 +3,13 @@
   border-radius: 6px;
   overflow: hidden;
 }
+
+.hero-body p {
+  margin-top: 1rem;
+  color: #391400a3;
+}
+
+.hero-body h2,
+.hero-body h3 {
+  color: var(--text-dark);
+}
