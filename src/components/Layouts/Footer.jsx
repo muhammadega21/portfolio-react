@@ -6,10 +6,10 @@ function Footer() {
         <h4>Personal</h4>
         <div className="footer-menu flex flex-col text-center md:text-left">
           <h5 className="mb-3">Menu</h5>
-          <Link to={"about"}>About</Link>
-          <Link to={"service"}>Services</Link>
-          <Link to={"blog"}>Blog</Link>
-          <Link to={"contact"}>Contact</Link>
+          <Link to={"/about"}>About</Link>
+          <Link to={"/layanan"}>Services</Link>
+          <Link to={"/portfolio"}>Portfolio</Link>
+          <Link to={"/blog"}>Blog</Link>
         </div>
         <div className="footer-service text-center md:text-left">
           <h5 className="mb-3">Service</h5>

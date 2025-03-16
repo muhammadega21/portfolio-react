@@ -5,10 +5,10 @@ section:not(.home) {
 
 .hero-head {
   padding: 1.5rem 0 0 0;
+  background-color: var(--dark-background);
 }
 
 .hero {
-  background-color: var(--dark-background);
   text-align: center;
   padding: 4rem 1rem;
   color: white;

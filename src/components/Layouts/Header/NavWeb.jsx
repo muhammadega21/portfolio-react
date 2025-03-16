@@ -13,7 +13,7 @@ function NavWeb() {
             <NavLink to={"/about"}>About</NavLink>
           </li>
           <li>
-            <NavLink to={"/layanan"}>Layanan</NavLink>
+            <NavLink to={"/layanan"}>Services</NavLink>
           </li>
           <li>
             <NavLink to={"/portfolio"}>Portfolio</NavLink>

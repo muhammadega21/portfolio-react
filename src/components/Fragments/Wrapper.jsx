@@ -13,7 +13,10 @@ function Wrapper({ children }) {
 function WrapperAbout() {
   return (
     <Wrapper>
-      <div className="list-wrapper about p-[2rem_1rem] md:p-[2rem_3rem]">
+      <div
+        className="list-wrapper about p-[2rem_1rem] md:p-[2rem_3rem]"
+        {...fadeUp}
+      >
         <div className="icon">
           <img src="./icons/callendar-check.svg" alt="callendar-check" />
         </div>
@@ -22,7 +25,11 @@ function WrapperAbout() {
           <p>Pengalaman Kerja</p>
         </div>
       </div>
-      <div className="list-wrapper about p-[2rem_1rem] md:p-[2rem_3rem]">
+      <div
+        className="list-wrapper about p-[2rem_1rem] md:p-[2rem_3rem]"
+        {...fadeUp}
+        data-aos-delay="100"
+      >
         <div className="icon">
           <img src="./icons/bag.svg" alt="" />
         </div>

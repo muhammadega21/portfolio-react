@@ -80,7 +80,7 @@ function NavMobile() {
           </li>
           <li>
             <NavLink to={"/layanan"} onClick={handleLinkClick}>
-              Layanan
+              Services
             </NavLink>
           </li>
           <li>
