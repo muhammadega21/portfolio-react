@@ -1,4 +1,4 @@
-import { WrapperLayanan } from "../../Fragments/Wrapper";
+import { WrapperLayanan } from "../../Fragments/_wrapper";
 import { Link } from "react-router-dom";
 
 const fadeUp = { "data-aos": "fade-up", "data-aos-duration": "500" };

@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/layouts/Header/Navbar";
+import Navbar from "./components/Layouts/Header/_navbar";
 import {
   Home,
   Layanan,
@@ -12,7 +12,7 @@ import {
 
 function App() {
   return (
-    <Router basename="/portfolio-react/">
+    <Router>
       <Navbar />
       <main>
         <Routes>

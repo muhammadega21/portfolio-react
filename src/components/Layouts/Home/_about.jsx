@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { WrapperAbout } from "../../Fragments/Wrapper";
+import { WrapperAbout } from "../../Fragments/_wrapper";
 
 const fadeUp = { "data-aos": "fade-up", "data-aos-duration": "500" };
 const fadeLeft = { "data-aos": "fade-left", "data-aos-duration": "500" };

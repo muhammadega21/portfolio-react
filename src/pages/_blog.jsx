@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import BackToTop from "../components/Elements/BackToTop";
+import BackToTop from "../components/Elements/_backToTop";
 import "./about.css";
 
 function Blog() {

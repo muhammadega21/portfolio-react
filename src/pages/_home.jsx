@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import BackToTop from "../components/Elements/BackToTop";
-import Footer from "../components/Layouts/Footer";
+import BackToTop from "../components/Elements/_backToTop";
+import Footer from "../components/Layouts/_footer";
 import {
   Hero,
   About,
@@ -9,7 +9,7 @@ import {
   Blog,
   Contact,
 } from "../components/Layouts/Home";
-import Portfolio from "../components/Layouts/Home/Portfolio";
+import Portfolio from "../components/Layouts/Home/_ortfolio";
 import AOS from "aos";
 import "aos/dist/aos.css";
 

@@ -1,9 +1,9 @@
-import Home from "./home";
-import Contact from "./contact";
-import Layanan from "./layanan";
-import Portfolio from "./portfolio";
-import Blog from "./blog";
-import About from "./about";
-import NotFound from "./404";
+import Home from "./_home";
+import Contact from "./_contact";
+import Layanan from "./_layanan";
+import Portfolio from "./_portfolio";
+import Blog from "./_blog";
+import About from "./_about";
+import NotFound from "./_404";
 
 export { Home, About, Layanan, Portfolio, Blog, Contact, NotFound };
