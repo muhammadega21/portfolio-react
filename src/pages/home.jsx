@@ -19,8 +19,8 @@ function Home() {
   }, []);
   return (
     <div className="w-full overflow-x-hidden">
-      <BackToTop top="home" />
-      <section className="home pt-4 md:pt-0 dark flex items-center " id="home">
+      <BackToTop top="" />
+      <section className="home pt-4 md:pt-0 dark flex items-center ">
         <Hero />
       </section>
       <section className="home light py-10 ">

@@ -88,11 +88,13 @@ function About() {
           </p>
         </div>
         <div className="bg-[#F3D1BF] h-[1px] w-full my-12"></div>
-        <div className="quote w-full md:w-1/2 mx-auto">
-          <h5 data-aos="fade-up" data-aos-duration="600">
-            FOUNDER WORDS
-          </h5>
-          <div className="relative" data-aos="fade-up" data-aos-duration="600">
+        <div
+          className="quote w-full md:w-1/2 mx-auto "
+          data-aos="fade-up"
+          data-aos-duration="600"
+        >
+          <h5>FOUNDER WORDS</h5>
+          <div className="relative">
             <h3 className="leading-[40px] md:leading-[50px] my-5 relative z-10">
               Digital agency is a business you hire to outsource your digital
               marketing efforts
@@ -102,8 +104,6 @@ function About() {
               alt="quote"
               className="absolute -top-10 right-0"
             />
-          </div>
-          <div data-aos="fade-up" data-aos-duration="600">
             <p className="!text-[#391400]">Gabriel Pires</p>
             <span className="text-[#391400A3] text-sm">Founder</span>
           </div>

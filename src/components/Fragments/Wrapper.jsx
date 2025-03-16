@@ -1,10 +1,11 @@
-import { PropTypes } from "prop-types";
 import "./index.css";
 
 const fadeUp = { "data-aos": "fade-up", "data-aos-duration": "500" };
-function Wrapper({ children }) {
+function Wrapper({ children, className }) {
   return (
-    <div className="flex flex-col md:flex-row items-center border border-[#f3d1bf] rounded-[6px]">
+    <div
+      className={`flex flex-col md:flex-row items-center border border-[#f3d1bf] rounded-[6px] ${className}`}
+    >
       {children}
     </div>
   );
@@ -93,8 +94,26 @@ function WrapperKontak() {
   );
 }
 
-Wrapper.propTypes = {
-  children: PropTypes.node,
-};
+function WrapperTech({ techName, className }) {
+  return (
+    <Wrapper className={`${className} border-x-0 py-5 `}>
+      <div className="tech-wrapper w-full">
+        <div className="tech">
+          <div className="tech-head flex justify-between items-center ">
+            <div className="flex items-center gap-x-10">
+              <div className="icon">
+                <img src="./icons/laptop.svg" alt="laptop" />
+              </div>
+              <h2>{techName}</h2>
+            </div>
+            <div className="icon !px-2 !py-2.5 cursor-pointer">
+              <img src="./icons/bottom2.svg" alt="up" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  );
+}
 
-export { WrapperAbout, WrapperLayanan, WrapperKontak };
+export { WrapperAbout, WrapperLayanan, WrapperKontak, WrapperTech };
