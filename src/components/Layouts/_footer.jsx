@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-function Footer() {
+function Footer({ page, borderColor, copyColor }) {
   return (
     <div className="footer-wrapper w-full px-[5%] md:px-[10%]">
       <div className="flex justify-between items-center md:items-start flex-col md:flex-row gap-y-10">
-        <h4>Personal</h4>
+        <h4>{page}</h4>
         <div className="footer-menu flex flex-col text-center md:text-left">
           <h5 className="mb-3">Menu</h5>
           <Link to={"/about"}>About</Link>
@@ -36,9 +36,13 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="border border-[#3A3C56] my-10"></div>
+      <div
+        className={`border ${
+          borderColor ? borderColor : "border-[#3A3C56]"
+        } my-10`}
+      ></div>
       <div className="flex flex-col md:flex-row justify-between text-center">
-        <p className="text-[#FFFFFFA3]">
+        <p className={`${copyColor ? copyColor : "text-[#FFFFFFA3]"}`}>
           Copyright © 2022 Laaqiq. <br className="block md:hidden" />
           All Rights Reserved.
         </p>

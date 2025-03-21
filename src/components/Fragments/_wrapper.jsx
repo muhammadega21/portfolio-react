@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./index.css";
 
 const fadeUp = { "data-aos": "fade-up", "data-aos-duration": "500" };
@@ -94,21 +95,37 @@ function WrapperKontak() {
   );
 }
 
-function WrapperTech({ techName, className }) {
+function WrapperTech({ children, techName, className }) {
+  const [open, setOpen] = useState(false);
+
   return (
     <Wrapper className={`${className} border-x-0 py-5 `}>
       <div className="tech-wrapper w-full">
         <div className="tech">
-          <div className="tech-head flex justify-between items-center ">
+          <div
+            onClick={() => setOpen(!open)}
+            className="tech-head flex justify-between items-center cursor-pointer"
+          >
             <div className="flex items-center gap-x-10">
               <div className="icon">
                 <img src="./icons/laptop.svg" alt="laptop" />
               </div>
               <h2>{techName}</h2>
             </div>
-            <div className="icon !px-2 !py-2.5 cursor-pointer">
-              <img src="./icons/bottom2.svg" alt="up" />
+            <div className="icon !px-2 !py-2.5">
+              {open ? (
+                <img src="./icons/bottom2.svg" alt="bottom" />
+              ) : (
+                <img src="./icons/up2.svg" alt="top" />
+              )}
             </div>
+          </div>
+          <div
+            className={`tech-body w-1/2 block ms-auto my-8 overflow-hidden transition-all duration-500 ease-out ${
+              open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+            }`}
+          >
+            {children}
           </div>
         </div>
       </div>

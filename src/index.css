@@ -4,13 +4,13 @@
 
 @layer base {
   h1 {
-    @apply text-[40px] md:text-[72px] font-extrabold;
+    @apply text-[40px] md:text-[72px] font-extrabold leading-[72px];
   }
   h2 {
-    @apply text-[40px] md:text-[56px] font-extrabold;
+    @apply text-[40px] md:text-[56px] font-extrabold leading-[64px];
   }
   h3 {
-    @apply text-[30px] md:text-[40px] font-extrabold;
+    @apply text-[30px] md:text-[40px] font-extrabold leading-[48px];
   }
 
   .list-wrapper:not(:first-child) {

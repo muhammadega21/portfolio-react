@@ -42,7 +42,7 @@ function Home() {
         <Contact />
       </section>
       <div className="dark py-10 grid place-items-center">
-        <Footer />
+        <Footer page={"Personal"} />
       </div>
     </div>
   );

@@ -112,7 +112,7 @@ function About() {
         <div className="text-center">Organizations...</div>
       </section>
       <div className="dark py-14">
-        <Footer />
+        <Footer page={"About"} />
       </div>
     </div>
   );
