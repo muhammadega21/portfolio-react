@@ -121,7 +121,7 @@ function WrapperTech({ children, techName, className }) {
             </div>
           </div>
           <div
-            className={`tech-body w-1/2 block ms-auto my-8 overflow-hidden transition-all duration-500 ease-out ${
+            className={`tech-body  w-full sm:w-1/2 block ms-auto my-8 overflow-hidden transition-all duration-500 ease-out ${
               open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
             }`}
           >

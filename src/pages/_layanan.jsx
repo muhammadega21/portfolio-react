@@ -26,7 +26,7 @@ function Layanan() {
         <h5 data-aos="fade-up" data-aos-duration="600">
           LAYANAN
         </h5>
-        <div className="flex justify-between gap-3 mt-8">
+        <div className="flex flex-col sm:flex-row justify-between gap-3 mt-8">
           <h3
             className="leading-[48px]"
             data-aos="fade-up"
@@ -158,11 +158,11 @@ function Layanan() {
             Bagaimana Project Kami
           </h5>
           <div
-            className="flex gap-5 mt-3"
+            className="flex flex-col sm:flex-row gap-5 mt-3"
             data-aos="fade-up"
             data-aos-duration="600"
           >
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h3 className="leading-[48px]">
                 Membuat Projectmu
                 <br />
@@ -185,9 +185,9 @@ function Layanan() {
               </h4>
             </div>
           </div>
-          <div className="flex justify-between items-center gap-x-20 bg-[#EF6D58] rounded-md p-20 mt-20">
+          <div className="flex flex-col-reverse sm:flex-row justify-between items-center gap-10 sm:gap-20 bg-[#EF6D58] rounded-md p-10 sm:p-20 mt-20">
             <div
-              className="w-1/2"
+              className="w-full sm:w-1/2"
               data-aos="fade-right"
               data-aos-duration="600"
             >
@@ -203,7 +203,7 @@ function Layanan() {
               </button>
             </div>
             <div
-              className="img w-1/2"
+              className="img w-full sm:w-1/2"
               data-aos="fade-left"
               data-aos-duration="600"
             >
