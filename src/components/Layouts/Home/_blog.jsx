@@ -28,7 +28,7 @@ function Blog() {
           {...fadeUp}
         >
           <div className="card-head">
-            <img src="images/blog-1.png" alt="blog-1" />
+            <img src="images/blog/blog-1.png" alt="blog-1" />
           </div>
           <div className="card-body">
             <p>Laravel</p>
@@ -44,7 +44,7 @@ function Blog() {
             data-aos-delay="100"
           >
             <div className="card-head">
-              <img src="images/blog-2.png" alt="blog-2" />
+              <img src="images/blog/blog-2.png" alt="blog-2" />
             </div>
             <div className="card-body">
               <p>React JS</p>
@@ -59,7 +59,7 @@ function Blog() {
             data-aos-delay="100"
           >
             <div className="card-head">
-              <img src="images/blog-3.png" alt="blog-3" />
+              <img src="images/blog/blog-3.png" alt="blog-3" />
             </div>
             <div className="card-body">
               <p>HTML & CSS</p>
