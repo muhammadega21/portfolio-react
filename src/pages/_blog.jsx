@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import BackToTop from "../components/Elements/_backToTop";
 import "./about.css";
+import { useState } from "react";
 
 function Blog() {
   useEffect(() => {
@@ -24,7 +25,85 @@ function Blog() {
       img: "images/blog/blog-8.png",
       date: "23 Nov, 2021",
     },
+    {
+      id: 3,
+      category: "Stories",
+      title: "Agency is a business you hire to outsource",
+      img: "images/blog/blog-1.png",
+      date: "5 Nov, 2021",
+    },
+    {
+      id: 4,
+      category: "Design",
+      title: "Outsource your digital marketing efforts",
+      img: "images/blog/blog-3.png",
+      date: "29 Oct, 2021",
+    },
+    {
+      id: 5,
+      category: "Marketing",
+      title: "Your business with a variety of digital",
+      img: "images/blog/blog-5.png",
+      date: "21 Oct, 2021",
+    },
+    {
+      id: 6,
+      category: "Design",
+      title: "Analytics to track and report on results",
+      img: "images/blog/blog-6.png",
+      date: "17 Nov, 2021",
+    },
+    {
+      id: 7,
+      category: "Branding",
+      title: "The most well known performance",
+      img: "images/blog/blog-7.png",
+      date: "12 Oct, 2021",
+    },
+    {
+      id: 8,
+      category: "Stories",
+      title: "Marketing channels native advertising",
+      img: "images/blog/blog-1.png",
+      date: "9 Oct, 2021",
+    },
+    {
+      id: 9,
+      category: "Design",
+      title: "Analytics to track and report on results",
+      img: "images/blog/blog-6.png",
+      date: "17 Nov, 2021",
+    },
+    {
+      id: 10,
+      category: "Branding",
+      title: "The most well known performance",
+      img: "images/blog/blog-7.png",
+      date: "12 Oct, 2021",
+    },
+    {
+      id: 11,
+      category: "Stories",
+      title: "Marketing channels native advertising",
+      img: "images/blog/blog-1.png",
+      date: "9 Oct, 2021",
+    },
   ];
+
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const [loadArticle, setLoadArticle] = useState(
+    articles.slice(0, -2).slice(0, 6)
+  );
+
+  const handleLoadMore = () => {
+    if (isExpanded) {
+      setLoadArticle(articles.slice(0, -2).slice(0, 6));
+    } else {
+      setLoadArticle(articles.slice(0, -2));
+    }
+    setIsExpanded(!isExpanded);
+  };
 
   return (
     <div className="w-full overflow-x-hidden">
@@ -39,9 +118,12 @@ function Blog() {
         </div>
       </section>
       <section className="hero-body">
-        <div className="blog-hero flex flex-col sm:flex-row gap-10">
-          {articles.map((article) => (
-            <div className="card min-w-0 sm:min-w-[570px]" key={article.id}>
+        <div className="blog-hero flex flex-col sm:flex-row justify-center flex-wrap gap-10 border-b-0 sm:border-b border-[#F3D1BF] pb-0 sm:pb-10">
+          {articles.slice(-2).map((article) => (
+            <div
+              className="card min-w-0 sm:min-w-[520px] max-w-[520px]"
+              key={article.id}
+            >
               <div className="card-head w-full">
                 <img className="w-full" src={article.img} alt={article.title} />
               </div>
@@ -53,7 +135,32 @@ function Blog() {
             </div>
           ))}
         </div>
-        <div className="blog-subhero"></div>
+
+        <div className="blog-subhero mt-10 flex justify-center gap-x-5 gap-y-10 flex-wrap">
+          {loadArticle.map((article) => (
+            <div
+              className="card min-w-0 sm:min-w-[340px] max-w-[340px]"
+              key={article.id}
+            >
+              <div className="card-head w-full">
+                <img className="w-full" src={article.img} alt={article.title} />
+              </div>
+              <div className="card-body mt-3">
+                <span className="text-xl">{article.category}</span>
+                <h4 className="mb-3">{article.title}</h4>
+                <span className="text-sm text-[#391400A3]">{article.date}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="w-full flex justify-center mt-10">
+          <button
+            onClick={handleLoadMore}
+            className="bg-white text-[#391400] font-bold px-6 py-2 rounded-md shadow-md"
+          >
+            {isExpanded ? "Load Less" : "Load More"}
+          </button>
+        </div>
       </section>
     </div>
   );
