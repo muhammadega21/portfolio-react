@@ -4,6 +4,8 @@ import "aos/dist/aos.css";
 import BackToTop from "../components/Elements/_backToTop";
 import "./about.css";
 import { useState } from "react";
+import Service from "./../components/Fragments/_service";
+import Footer from "../components/Layouts/_footer";
 
 function Blog() {
   useEffect(() => {
@@ -107,9 +109,13 @@ function Blog() {
 
   return (
     <div className="w-full overflow-x-hidden">
-      <BackToTop />
-      <section className="py-10 hero-head">
-        <div className="bg-background-dark text-center py-16 px-4">
+      <BackToTop top={""} />
+      <section className="pt-10 hero-head bg-background-dark">
+        <div
+          className=" text-center py-16 px-4"
+          data-aos="fade-up"
+          data-aos-duration="600"
+        >
           <h1>Blog Artikel</h1>
           <p className="mt-3 w-full md:w-1/2 mx-auto">
             Agency provides a full service range including technical skills,
@@ -123,6 +129,8 @@ function Blog() {
             <div
               className="card min-w-0 sm:min-w-[520px] max-w-[520px]"
               key={article.id}
+              data-aos="fade-up"
+              data-aos-duration="600"
             >
               <div className="card-head w-full">
                 <img className="w-full" src={article.img} alt={article.title} />
@@ -141,6 +149,8 @@ function Blog() {
             <div
               className="card min-w-0 sm:min-w-[340px] max-w-[340px]"
               key={article.id}
+              data-aos="fade-up"
+              data-aos-duration="600"
             >
               <div className="card-head w-full">
                 <img className="w-full" src={article.img} alt={article.title} />
@@ -153,7 +163,11 @@ function Blog() {
             </div>
           ))}
         </div>
-        <div className="w-full flex justify-center mt-10">
+        <div
+          className="w-full flex justify-center mt-10"
+          data-aos="fade-up"
+          data-aos-duration="600"
+        >
           <button
             onClick={handleLoadMore}
             className="bg-white text-[#391400] font-bold px-6 py-2 rounded-md shadow-md"
@@ -161,7 +175,34 @@ function Blog() {
             {isExpanded ? "Load Less" : "Load More"}
           </button>
         </div>
+        <div
+          className="flex flex-col sm:flex-row justify-between items-center mt-10 py-10 border-y border-[#F3D1BF] gap-5"
+          data-aos="fade-up"
+          data-aos-duration="600"
+        >
+          <h3>Newsletter</h3>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-5">
+            <input
+              type="email"
+              name=""
+              id=""
+              placeholder="Your email"
+              className="px-6 py-2 border border-[#F3D1BF] rounded-md min-w-0 w-full sm:min-w-[370px] max-w-[370px]"
+            />
+            <button className="bg-white text-[#391400] font-bold px-6 py-2 rounded-md shadow-md">
+              Subscribe
+            </button>
+          </div>
+        </div>
+        <Service />
       </section>
+      <div className="py-10">
+        <Footer
+          copyColor={"#391400A3"}
+          page={"Layanan"}
+          borderColor={"#F3D1BF"}
+        />
+      </div>
     </div>
   );
 }
