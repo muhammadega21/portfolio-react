@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import BackToTop from "../components/Elements/_backToTop";
 import "./about.css";
@@ -7,14 +6,15 @@ import { useState } from "react";
 import Service from "./../components/Fragments/_service";
 import Footer from "../components/Layouts/_footer";
 import { tabTitle } from "../utils/generalFunctions";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Blog() {
-  // useEffect(() => {
-  //   AOS.init();
-  // }, []);
-
   tabTitle("Portfolio | Blog");
+
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   const articles = [
     {
@@ -162,7 +162,8 @@ function Blog() {
 
         <div className="blog-subhero mt-10 flex justify-center gap-x-5 gap-y-10 flex-wrap">
           {loadArticle.map((article) => (
-            <div
+            <Link
+              to={`/blog/${article.slug}`}
               className="card min-w-0 sm:min-w-[340px] max-w-[340px]"
               key={article.id}
               data-aos="fade-up"
@@ -176,7 +177,7 @@ function Blog() {
                 <h4 className="mb-3">{article.title}</h4>
                 <span className="text-sm text-[#391400A3]">{article.date}</span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <div

@@ -1,10 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import BackToTop from "../components/Elements/_backToTop";
 import DOMPurify from "dompurify";
 import Service from "../components/Fragments/_service";
 import Footer from "./../components/Layouts/_footer";
+import { useEffect } from "react";
 
 function SinglePost() {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   const article = [
     {
       id: 1,
@@ -157,7 +162,8 @@ function SinglePost() {
         </h4>
         <div className="blog-subhero mt-10 flex justify-center gap-x-5 gap-y-10 flex-wrap">
           {relatedArticle.map((article) => (
-            <div
+            <Link
+              to={`/blog/${article.slug}`}
               className="card min-w-0 sm:min-w-[300px] max-w-[300px]"
               key={article.id}
               data-aos="fade-up"
@@ -171,7 +177,7 @@ function SinglePost() {
                 <h4 className="mb-3">{article.title}</h4>
                 <span className="text-sm text-[#391400A3]">{article.date}</span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <Service />

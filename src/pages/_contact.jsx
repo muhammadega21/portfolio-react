@@ -1,14 +1,15 @@
 import { useEffect } from "react";
 import BackToTop from "../components/Elements/_backToTop";
-import AOS from "aos";
 import { tabTitle } from "../utils/generalFunctions";
+import { useLocation } from "react-router-dom";
 
 function Contact() {
-  // useEffect(() => {
-  //   AOS.init();
-  // }, []);
-
   tabTitle("Portfolio | Contact");
+
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <div className="w-full overflow-x-hidden">

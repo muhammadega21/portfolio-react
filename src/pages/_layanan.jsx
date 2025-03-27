@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import BackToTop from "../components/Elements/_backToTop";
 import "./about.css";
@@ -7,13 +6,16 @@ import { WrapperTech } from "../components/Fragments/_wrapper";
 import Footer from "../components/Layouts/_footer";
 import Service from "./../components/Fragments/_service";
 import { tabTitle } from "../utils/generalFunctions";
+import { useLocation } from "react-router-dom";
 
 function Layanan() {
-  // useEffect(() => {
-  //   AOS.init();
-  // }, []);
-
   tabTitle("Portfolio | Service");
+
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className="w-full overflow-x-hidden">
       <BackToTop top={""} />

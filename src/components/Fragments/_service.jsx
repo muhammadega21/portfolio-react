@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Service() {
   return (
     <div className="flex flex-col-reverse sm:flex-row justify-between items-center gap-10 sm:gap-20 bg-[#EF6D58] rounded-md p-10 sm:p-20 mt-20">
@@ -13,9 +15,12 @@ function Service() {
           A digital agency is a business you hire to outsource your digital
           marketing efforts, instead of handling in-house.
         </p>
-        <button className="text-[#391400] bg-white px-6 py-3 uppercase font-extrabold rounded-md mt-4">
+        <Link
+          to={"/contact"}
+          className="text-[#391400] inline-block bg-white px-6 py-3 uppercase font-extrabold rounded-md mt-4"
+        >
           Hubungi Kami
-        </button>
+        </Link>
       </div>
       <div
         className="img w-full sm:w-1/2"

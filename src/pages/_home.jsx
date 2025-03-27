@@ -10,16 +10,17 @@ import {
   Contact,
 } from "../components/Layouts/Home";
 import Portfolio from "../components/Layouts/Home/_portfolio";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import { tabTitle } from "../utils/generalFunctions";
+import { useLocation } from "react-router-dom";
 
 function Home() {
-  // useEffect(() => {
-  //   AOS.init();
-  // }, []);
-
   tabTitle("Portfolio | Home");
+
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <div className="w-full overflow-x-hidden">
