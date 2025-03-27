@@ -22,7 +22,7 @@ function Service() {
         data-aos="fade-left"
         data-aos-duration="600"
       >
-        <img src="./images/service.png" alt="service" />
+        <img src="/images/service.png" alt="service" />
       </div>
     </div>
   );

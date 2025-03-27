@@ -21,17 +21,17 @@ function Footer({ page, borderColor, copyColor }) {
         <div className="footer-socialMedia flex gap-3">
           <div className="social-wrapper">
             <Link to={"https://github.com/muhammadega21"} target="blank">
-              <img src="./icons/facebook.svg" alt="facebook" />
+              <img src="/icons/facebook.svg" alt="facebook" />
             </Link>
           </div>
           <div className="social-wrapper">
             <Link to={"https://github.com/muhammadega21"} target="blank">
-              <img src="./icons/twitter.svg" alt="twitter" />
+              <img src="/icons/twitter.svg" alt="twitter" />
             </Link>
           </div>
           <div className="social-wrapper">
             <Link to={"https://github.com/muhammadega21"} target="blank">
-              <img src="./icons/instagram.svg" alt="instagram" />
+              <img src="/icons/instagram.svg" alt="instagram" />
             </Link>
           </div>
         </div>

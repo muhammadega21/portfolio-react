@@ -12,11 +12,15 @@ import {
 import Portfolio from "../components/Layouts/Home/_portfolio";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { tabTitle } from "../utils/generalFunctions";
 
 function Home() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  // useEffect(() => {
+  //   AOS.init();
+  // }, []);
+
+  tabTitle("Portfolio | Home");
+
   return (
     <div className="w-full overflow-x-hidden">
       <BackToTop top="" />

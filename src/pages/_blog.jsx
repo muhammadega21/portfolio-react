@@ -6,17 +6,22 @@ import "./about.css";
 import { useState } from "react";
 import Service from "./../components/Fragments/_service";
 import Footer from "../components/Layouts/_footer";
+import { tabTitle } from "../utils/generalFunctions";
+import { Link } from "react-router-dom";
 
 function Blog() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  // useEffect(() => {
+  //   AOS.init();
+  // }, []);
+
+  tabTitle("Portfolio | Blog");
 
   const articles = [
     {
       id: 1,
       category: "Stories",
       title: "Performance marketing agencies specialize",
+      slug: "performance-marketing-agencies-specialize",
       img: "images/blog/blog-4.png",
       date: "7 Dec, 2021",
     },
@@ -24,6 +29,7 @@ function Blog() {
       id: 2,
       category: "Design",
       title: "Digital marketing channels",
+      slug: "digital-marketing-channels",
       img: "images/blog/blog-8.png",
       date: "23 Nov, 2021",
     },
@@ -31,6 +37,7 @@ function Blog() {
       id: 3,
       category: "Stories",
       title: "Agency is a business you hire to outsource",
+      slug: "agency-is-a-business-you-hire-to-outsource",
       img: "images/blog/blog-1.png",
       date: "5 Nov, 2021",
     },
@@ -38,6 +45,7 @@ function Blog() {
       id: 4,
       category: "Design",
       title: "Outsource your digital marketing efforts",
+      slug: "outsource-your-digital-marketing-efforts",
       img: "images/blog/blog-3.png",
       date: "29 Oct, 2021",
     },
@@ -45,6 +53,7 @@ function Blog() {
       id: 5,
       category: "Marketing",
       title: "Your business with a variety of digital",
+      slug: "your-business-with-a-variety-of-digital",
       img: "images/blog/blog-5.png",
       date: "21 Oct, 2021",
     },
@@ -52,6 +61,7 @@ function Blog() {
       id: 6,
       category: "Design",
       title: "Analytics to track and report on results",
+      slug: "analytics-to-track-and-report-on-results",
       img: "images/blog/blog-6.png",
       date: "17 Nov, 2021",
     },
@@ -59,6 +69,7 @@ function Blog() {
       id: 7,
       category: "Branding",
       title: "The most well known performance",
+      slug: "the-most-well-known-performance",
       img: "images/blog/blog-7.png",
       date: "12 Oct, 2021",
     },
@@ -66,6 +77,7 @@ function Blog() {
       id: 8,
       category: "Stories",
       title: "Marketing channels native advertising",
+      slug: "marketing-channels-native-advertising",
       img: "images/blog/blog-1.png",
       date: "9 Oct, 2021",
     },
@@ -73,6 +85,7 @@ function Blog() {
       id: 9,
       category: "Design",
       title: "Analytics to track and report on results",
+      slug: "analytics-to-track-and-report-on-results",
       img: "images/blog/blog-6.png",
       date: "17 Nov, 2021",
     },
@@ -80,6 +93,7 @@ function Blog() {
       id: 10,
       category: "Branding",
       title: "The most well known performance",
+      slug: "the-most-well-known-performance",
       img: "images/blog/blog-7.png",
       date: "12 Oct, 2021",
     },
@@ -87,6 +101,7 @@ function Blog() {
       id: 11,
       category: "Stories",
       title: "Marketing channels native advertising",
+      slug: "marketing-channels-native-advertising",
       img: "images/blog/blog-1.png",
       date: "9 Oct, 2021",
     },
@@ -126,7 +141,8 @@ function Blog() {
       <section className="hero-body">
         <div className="blog-hero flex flex-col sm:flex-row justify-center flex-wrap gap-10 border-b-0 sm:border-b border-[#F3D1BF] pb-0 sm:pb-10">
           {articles.slice(-2).map((article) => (
-            <div
+            <Link
+              to={`/blog/${article.slug}`}
               className="card min-w-0 sm:min-w-[520px] max-w-[520px]"
               key={article.id}
               data-aos="fade-up"
@@ -140,7 +156,7 @@ function Blog() {
                 <h3 className="mb-3">{article.title}</h3>
                 <span className="text-sm text-[#391400A3]">{article.date}</span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

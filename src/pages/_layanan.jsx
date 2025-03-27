@@ -6,11 +6,14 @@ import "./about.css";
 import { WrapperTech } from "../components/Fragments/_wrapper";
 import Footer from "../components/Layouts/_footer";
 import Service from "./../components/Fragments/_service";
+import { tabTitle } from "../utils/generalFunctions";
 
 function Layanan() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  // useEffect(() => {
+  //   AOS.init();
+  // }, []);
+
+  tabTitle("Portfolio | Service");
   return (
     <div className="w-full overflow-x-hidden">
       <BackToTop top={""} />

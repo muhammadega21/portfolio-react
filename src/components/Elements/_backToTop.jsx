@@ -23,7 +23,7 @@ function BackToTop({ top }) {
   return (
     <div className={`back-to-top ${show ? "show" : ""}`}>
       <a href={`#${top}`}>
-        <img src="./icons/up.svg" alt="up" />
+        <img src="/icons/up.svg" alt="up" />
       </a>
     </div>
   );

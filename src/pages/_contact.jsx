@@ -1,11 +1,15 @@
 import { useEffect } from "react";
 import BackToTop from "../components/Elements/_backToTop";
 import AOS from "aos";
+import { tabTitle } from "../utils/generalFunctions";
 
 function Contact() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  // useEffect(() => {
+  //   AOS.init();
+  // }, []);
+
+  tabTitle("Portfolio | Contact");
+
   return (
     <div className="w-full overflow-x-hidden">
       <BackToTop top={""} />

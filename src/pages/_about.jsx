@@ -6,11 +6,14 @@ import "./index.css";
 import "./about.css";
 import { WrapperAbout } from "../components/Fragments/_wrapper";
 import Footer from "../components/Layouts/_footer";
+import { tabTitle } from "../utils/generalFunctions";
 
 function About() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  // useEffect(() => {
+  //   AOS.init();
+  // }, []);
+
+  tabTitle("Portfolio | About");
   return (
     <div className="w-full overflow-x-hidden">
       <BackToTop top={""} />
