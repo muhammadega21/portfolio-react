@@ -31,7 +31,7 @@ function About() {
       <section className="hero-body">
         <div className="about-profile">
           <div className="img" data-aos="fade-up" data-aos-duration="600">
-            <img src="images/about-hero.png" alt="about-hero.png" />
+            <img src="/images/about-hero.png" alt="about-hero.png" />
           </div>
           <div className="py-10 w-full md:w-1/2 mx-auto">
             <h5 data-aos="fade-up" data-aos-duration="600">

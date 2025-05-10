@@ -14,26 +14,26 @@ function Benefits() {
         <ul>
           <li>
             <div className="benefit-icon">
-              <img src="./icons/check.svg" alt="check" />
+              <img src="/icons/check.svg" alt="check" />
             </div>
             Modern Desain Web App
           </li>
           <li>
             <div className="benefit-icon">
-              <img src="./icons/check.svg" alt="check" />
+              <img src="/icons/check.svg" alt="check" />
             </div>
             Kodingan Terstruktur
           </li>
           <li>
             <div className="benefit-icon">
-              <img src="./icons/check.svg" alt="check" />
+              <img src="/icons/check.svg" alt="check" />
             </div>
             Keamanan Terjamin
           </li>
         </ul>
       </div>
       <div className="img" {...fadeUp} data-aos-delay="100">
-        <img src="./images/image-2.png" alt="image-2" />
+        <img src="/images/image-2.png" alt="image-2" />
       </div>
     </div>
   );

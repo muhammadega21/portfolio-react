@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import CustomLink from "./CustomLink";
 function NavMobile() {
   const [open, setOpen] = useState(false);
   const navRef = useRef();
@@ -40,10 +40,10 @@ function NavMobile() {
       }] navMobile flex flex-col md:hidden px-[5%] dark`}
     >
       <div className="logo py-3 justify-between">
-        <NavLink to={"/"} className="flex items-center gap-3">
-          <img src="./images/logo.png" alt="Logo" />
+        <CustomLink to={"/"} className="flex items-center gap-3">
+          <img src="/images/logo.png" alt="Logo" />
           <h4>Portfolio</h4>
-        </NavLink>
+        </CustomLink>
         <div
           className={`menu ${open ? "open" : "close"}`}
           onClick={handleClick}
@@ -74,34 +74,34 @@ function NavMobile() {
       <div className="nav-link flex flex-col w-full">
         <ul className="w-full">
           <li>
-            <NavLink to={"/about"} onClick={handleLinkClick}>
+            <CustomLink to={"/about"} onClick={handleLinkClick}>
               About
-            </NavLink>
+            </CustomLink>
           </li>
           <li>
-            <NavLink to={"/layanan"} onClick={handleLinkClick}>
+            <CustomLink to={"/layanan"} onClick={handleLinkClick}>
               Services
-            </NavLink>
+            </CustomLink>
           </li>
           <li>
-            <NavLink to={"/portfolio"} onClick={handleLinkClick}>
+            <CustomLink to={"/portfolio"} onClick={handleLinkClick}>
               Portfolio
-            </NavLink>
+            </CustomLink>
           </li>
           <li>
-            <NavLink to={"/blog"} onClick={handleLinkClick}>
+            <CustomLink to={"/blog"} onClick={handleLinkClick}>
               Blog
-            </NavLink>
+            </CustomLink>
           </li>
         </ul>
         <div className="contact-btn my-3 w-full">
-          <NavLink
+          <CustomLink
             to={"/contact"}
             className="w-full block text-center"
             onClick={handleLinkClick}
           >
             CONTACT
-          </NavLink>
+          </CustomLink>
         </div>
       </div>
     </nav>

@@ -20,7 +20,7 @@ function Hero() {
       </div>
       <div className="hero-img" data-aos="fade-up" data-aos-duration="600">
         <img
-          src="./images/banner.png"
+          src="/images/banner.png"
           alt="Hero"
           className="w-4/5 md:w-full mx-auto"
         />

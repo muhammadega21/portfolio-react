@@ -7,6 +7,7 @@ import Service from "./../components/Fragments/_service";
 import Footer from "../components/Layouts/_footer";
 import { tabTitle } from "../utils/generalFunctions";
 import { Link, useLocation } from "react-router-dom";
+import CustomLink from "../components/Layouts/Header/CustomLink";
 
 function Blog() {
   tabTitle("Portfolio | Blog");
@@ -141,7 +142,7 @@ function Blog() {
       <section className="hero-body">
         <div className="blog-hero flex flex-col sm:flex-row justify-center flex-wrap gap-10 border-b-0 sm:border-b border-[#F3D1BF] pb-0 sm:pb-10">
           {articles.slice(-2).map((article) => (
-            <Link
+            <CustomLink
               to={`/blog/${article.slug}`}
               className="card min-w-0 sm:min-w-[520px] max-w-[520px]"
               key={article.id}
@@ -149,20 +150,24 @@ function Blog() {
               data-aos-duration="600"
             >
               <div className="card-head w-full">
-                <img className="w-full" src={article.img} alt={article.title} />
+                <img
+                  className="w-full"
+                  src={`/${article.img}`}
+                  alt={article.title}
+                />
               </div>
               <div className="card-body mt-3">
                 <span className="text-xl">{article.category}</span>
                 <h3 className="mb-3">{article.title}</h3>
                 <span className="text-sm text-[#391400A3]">{article.date}</span>
               </div>
-            </Link>
+            </CustomLink>
           ))}
         </div>
 
         <div className="blog-subhero mt-10 flex justify-center gap-x-5 gap-y-10 flex-wrap">
           {loadArticle.map((article) => (
-            <Link
+            <CustomLink
               to={`/blog/${article.slug}`}
               className="card min-w-0 sm:min-w-[340px] max-w-[340px]"
               key={article.id}
@@ -170,14 +175,18 @@ function Blog() {
               data-aos-duration="600"
             >
               <div className="card-head w-full">
-                <img className="w-full" src={article.img} alt={article.title} />
+                <img
+                  className="w-full"
+                  src={`/${article.img}`}
+                  alt={article.title}
+                />
               </div>
               <div className="card-body mt-3">
                 <span className="text-xl">{article.category}</span>
                 <h4 className="mb-3">{article.title}</h4>
                 <span className="text-sm text-[#391400A3]">{article.date}</span>
               </div>
-            </Link>
+            </CustomLink>
           ))}
         </div>
         <div

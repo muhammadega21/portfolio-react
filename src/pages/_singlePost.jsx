@@ -17,7 +17,7 @@ function SinglePost() {
       category: "Stories",
       title: "Performance marketing agencies specialize",
       slug: "performance-marketing-agencies-specialize",
-      img: "/images/blog/blog-4.png",
+      img: "images/blog/blog-4.png",
       date: "7 Dec, 2021",
       quote:
         "Provide your business with a variety of digital solutions to promote your product or service online and help you.",
@@ -65,7 +65,7 @@ function SinglePost() {
       category: "Stories",
       title: "Performance marketing agencies specialize",
       slug: "performance-marketing-agencies-specialize",
-      img: "/images/blog/blog-4.png",
+      img: "images/blog/blog-4.png",
       date: "7 Dec, 2021",
     },
     {
@@ -73,7 +73,7 @@ function SinglePost() {
       category: "Design",
       title: "Digital marketing channels",
       slug: "digital-marketing-channels",
-      img: "/images/blog/blog-8.png",
+      img: "images/blog/blog-8.png",
       date: "23 Nov, 2021",
     },
     {
@@ -81,7 +81,7 @@ function SinglePost() {
       category: "Stories",
       title: "Agency is a business you hire to outsource",
       slug: "agency-is-a-business-you-hire-to-outsource",
-      img: "/images/blog/blog-1.png",
+      img: "images/blog/blog-1.png",
       date: "5 Nov, 2021",
     },
   ];
@@ -117,7 +117,11 @@ function SinglePost() {
         data-aos-duration="600"
       >
         <div className="">
-          <img className="w-full" src={article[0].img} alt={article[0].title} />
+          <img
+            className="w-full"
+            src={`/${article[0].img}`}
+            alt={article[0].title}
+          />
         </div>
         <div className="px-[15%] py-10 border-b border-[#F3D1BF]">
           <div
@@ -127,7 +131,7 @@ function SinglePost() {
           <div className="pt-10 flex flex-col sm:flex-row items-center justify-between gap-5">
             <div className="flex flex-col sm:flex-row items-center gap-5">
               <div className="img w-20 rounded-full overflow-hidden">
-                <img src="/images/ega.jpg" alt="ega" />
+                <img src="/images/ega2.jpg" alt="ega" />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl text-[#391400]">
@@ -170,7 +174,11 @@ function SinglePost() {
               data-aos-duration="600"
             >
               <div className="card-head w-full">
-                <img className="w-full" src={article.img} alt={article.title} />
+                <img
+                  className="w-full"
+                  src={`/${article.img}`}
+                  alt={article.title}
+                />
               </div>
               <div className="card-body mt-3">
                 <span className="text-xl">{article.category}</span>

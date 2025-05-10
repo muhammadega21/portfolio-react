@@ -47,19 +47,19 @@ function Contact() {
           <ul className="contact-link ">
             <li>
               <div className="contact-icon">
-                <img src="./icons/compas.svg" alt="compas" />
+                <img src="/icons/compas.svg" alt="compas" />
               </div>
               Payakumbuh
             </li>
             <li>
               <div className="contact-icon">
-                <img src="./icons/phone.svg" alt="phone" />
+                <img src="/icons/phone.svg" alt="phone" />
               </div>
               085763000486
             </li>
             <li>
               <div className="contact-icon">
-                <img src="./icons/envelope.svg" alt="envelope" />
+                <img src="/icons/envelope.svg" alt="envelope" />
               </div>
               dermawane988@gmail.com
             </li>

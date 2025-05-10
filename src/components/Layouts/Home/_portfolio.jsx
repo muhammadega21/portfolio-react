@@ -27,7 +27,7 @@ function Portfolio() {
             data-aos-duration="500"
             data-aos-delay="100"
           >
-            <img src="./images/project-1.png" alt="project-1" />
+            <img src="/images/project-1.png" alt="project-1" />
             <div className="project-desc">
               <p>Laravel</p>
               <h3>E-Commerce</h3>
@@ -41,7 +41,7 @@ function Portfolio() {
             data-aos-duration="600"
             data-aos-delay="150"
           >
-            <img src="./images/project-2.png" alt="project-1" />
+            <img src="/images/project-2.png" alt="project-1" />
             <div className="project-desc">
               <p>Python</p>
               <h3>AI Chat</h3>
@@ -55,7 +55,7 @@ function Portfolio() {
             data-aos-duration="700"
             data-aos-delay="200"
           >
-            <img src="./images/project-3.png" alt="project-1" />
+            <img src="/images/project-3.png" alt="project-1" />
             <div className="project-desc">
               <p>React JS</p>
               <h3>Todo List App</h3>

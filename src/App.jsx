@@ -8,6 +8,7 @@ import {
   Contact,
   About,
   SinglePost,
+  NotFound,
 } from "./pages";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Navbar />
       <main>
         <Routes>
+          {/* Default routes without username */}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/layanan" element={<Layanan />} />
@@ -23,6 +25,20 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<SinglePost />} />
           <Route path="/contact" element={<Contact />} />
+
+          {/* Routes with username - more specific paths */}
+          <Route path="/:username">
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="layanan" element={<Layanan />} />
+            <Route path="portfolio" element={<Portfolio />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="blog/:slug" element={<SinglePost />} />
+            <Route path="contact" element={<Contact />} />
+          </Route>
+
+          {/* 404 Not Found */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </Router>

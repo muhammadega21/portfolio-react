@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import BackToTop from "../components/Elements/_backToTop";
 import Footer from "../components/Layouts/_footer";
 import {
@@ -12,15 +12,33 @@ import {
 import Portfolio from "../components/Layouts/Home/_portfolio";
 import "aos/dist/aos.css";
 import { tabTitle } from "../utils/generalFunctions";
-import { useLocation } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
+import { userProfile } from "../services/publicService";
 
 function Home() {
   tabTitle("Portfolio | Home");
+
+  const [user, setUser] = useState(null);
 
   const location = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+
+  const [searchParam] = useSearchParams();
+  const username = searchParam.get("u");
+
+  useEffect(() => {
+    async function fetchUserProfile() {
+      try {
+        const response = await userProfile(username);
+        setUser(response);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchUserProfile();
+  }, [username]);
 
   return (
     <div className="w-full overflow-x-hidden">

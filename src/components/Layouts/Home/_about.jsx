@@ -10,7 +10,7 @@ function About() {
     <div className="flex flex-col justify-center items-center h-full w-full px-[5%] md:px-[10%] py-[2rem]">
       <div className=" w-full flex flex-col md:flex-row items-center justify-center md:justify-between gap-y-8">
         <div className="w-full md:w-[40%] " {...fadeRight}>
-          <img src="./images/image-1.png" alt="image1" className=" " />
+          <img src="/images/image-1.png" alt="image1" className=" " />
         </div>
         <div className="about-profile w-full md:w-[50%]" {...fadeLeft}>
           <h4>Muhammad Ega Dermawan</h4>

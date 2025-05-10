@@ -20,7 +20,7 @@ function WrapperAbout() {
         {...fadeUp}
       >
         <div className="icon">
-          <img src="./icons/callendar-check.svg" alt="callendar-check" />
+          <img src="/icons/callendar-check.svg" alt="callendar-check" />
         </div>
         <div>
           <h3>2 Tahun</h3>
@@ -33,7 +33,7 @@ function WrapperAbout() {
         data-aos-delay="100"
       >
         <div className="icon">
-          <img src="./icons/bag.svg" alt="" />
+          <img src="/icons/bag.svg" alt="" />
         </div>
         <div>
           <h3>20+</h3>
@@ -50,7 +50,7 @@ function WrapperLayanan() {
       <div className="list-wrapper layanan p-[2rem_1.5rem] md:p-[2rem_3rem]">
         <div className="icon-wrapper" {...fadeUp}>
           <div className="icon">
-            <img src="./icons/laptop.svg" alt="laptop" />
+            <img src="/icons/laptop.svg" alt="laptop" />
           </div>
           <h4>Laravel</h4>
         </div>
@@ -60,7 +60,7 @@ function WrapperLayanan() {
         </p>
         <div className="more" {...fadeUp} data-aos-delay="100">
           <div className="icon">
-            <img src="./icons/plus.svg" alt="plus" />
+            <img src="/icons/plus.svg" alt="plus" />
           </div>
           <span>Learn More</span>
         </div>
@@ -68,7 +68,7 @@ function WrapperLayanan() {
       <div className="list-wrapper layanan p-[2rem_1.5rem] md:p-[2rem_3rem]">
         <div className="icon-wrapper" {...fadeUp}>
           <div className="icon">
-            <img src="./icons/bag.svg" alt="bag" />
+            <img src="/icons/bag.svg" alt="bag" />
           </div>
           <h4>React JS</h4>
         </div>
@@ -78,7 +78,7 @@ function WrapperLayanan() {
         </p>
         <div className="more" {...fadeUp} data-aos-delay="100">
           <div className="icon">
-            <img src="./icons/plus.svg" alt="plus" />
+            <img src="/icons/plus.svg" alt="plus" />
           </div>
           <span>Learn More</span>
         </div>
@@ -108,15 +108,15 @@ function WrapperTech({ children, techName, className }) {
           >
             <div className="flex items-center gap-x-10">
               <div className="icon">
-                <img src="./icons/laptop.svg" alt="laptop" />
+                <img src="/icons/laptop.svg" alt="laptop" />
               </div>
               <h2>{techName}</h2>
             </div>
             <div className="icon !px-2 !py-2.5">
               {open ? (
-                <img src="./icons/bottom2.svg" alt="bottom" />
+                <img src="/icons/bottom2.svg" alt="bottom" />
               ) : (
-                <img src="./icons/up2.svg" alt="top" />
+                <img src="/icons/up2.svg" alt="top" />
               )}
             </div>
           </div>

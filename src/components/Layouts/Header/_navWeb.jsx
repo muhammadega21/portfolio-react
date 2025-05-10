@@ -1,30 +1,30 @@
-import { NavLink } from "react-router-dom";
+import CustomLink from "./CustomLink";
 
 function NavWeb() {
   return (
     <nav className="hidden md:flex justify-between items-center px-[10%] h-[70px]  dark">
-      <NavLink to={"/"} className="logo">
+      <CustomLink to="/" className="logo">
         <img src="/images/logo.png" alt="Logo" />
         <h4>Portfolio</h4>
-      </NavLink>
+      </CustomLink>
       <div className="nav-link">
         <ul className="flex items-center gap-[2rem] lg:gap-[5rem]">
           <li>
-            <NavLink to={"/about"}>About</NavLink>
+            <CustomLink to="/about">About</CustomLink>
           </li>
           <li>
-            <NavLink to={"/layanan"}>Services</NavLink>
+            <CustomLink to="/layanan">Services</CustomLink>
           </li>
           <li>
-            <NavLink to={"/portfolio"}>Portfolio</NavLink>
+            <CustomLink to="/portfolio">Portfolio</CustomLink>
           </li>
           <li>
-            <NavLink to={"/blog"}>Blog</NavLink>
+            <CustomLink to="/blog">Blog</CustomLink>
           </li>
         </ul>
       </div>
       <div className="contact-btn">
-        <NavLink to={"/contact"}>CONTACT</NavLink>
+        <CustomLink to="/contact">CONTACT</CustomLink>
       </div>
     </nav>
   );
