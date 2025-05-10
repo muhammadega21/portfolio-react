@@ -6,7 +6,7 @@ import { useState } from "react";
 import Service from "./../components/Fragments/_service";
 import Footer from "../components/Layouts/_footer";
 import { tabTitle } from "../utils/generalFunctions";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import CustomLink from "../components/Layouts/Header/CustomLink";
 
 function Blog() {
