@@ -10,7 +10,6 @@ function CustomLink({
   const location = useLocation();
   const segments = location.pathname.split("/").filter(Boolean);
 
-  // Cek jika segment pertama bukan route yang diketahui (anggap sebagai username)
   const knownRoutes = ["about", "layanan", "portfolio", "blog", "contact"];
   const hasUsername = segments.length > 0 && !knownRoutes.includes(segments[0]);
 

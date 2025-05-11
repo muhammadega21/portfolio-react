@@ -1,9 +1,9 @@
 import "./index.css";
-import Hero from "./_hero";
-import About from "./_about";
-import Layanan from "./_layanan";
-import Benefits from "./_benefits";
-import Blog from "./_blog";
-import Contact from "./_contact";
+import Hero from "./Hero";
+import About from "./About";
+import Layanan from "./Layanan";
+import Benefits from "./Benefits";
+import Blog from "./Blog";
+import Contact from "./Contact";
 
 export { Hero, About, Layanan, Benefits, Blog, Contact };

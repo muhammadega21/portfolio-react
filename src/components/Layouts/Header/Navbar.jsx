@@ -1,6 +1,6 @@
 import "./index.css";
-import NavWeb from "./_navWeb";
-import NavMobile from "./_navMobile";
+import NavWeb from "./NavWeb";
+import NavMobile from "./NavMobile";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
