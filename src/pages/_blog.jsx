@@ -7,7 +7,7 @@ import Service from "./../components/Fragments/_service";
 import Footer from "../components/Layouts/_footer";
 import { tabTitle } from "../utils/generalFunctions";
 import { useLocation } from "react-router-dom";
-import CustomLink from "../components/Layouts/Header/CustomLink";
+import CustomLink from "../components/Layouts/Header/_customLink";
 
 function Blog() {
   tabTitle("Portfolio | Blog");

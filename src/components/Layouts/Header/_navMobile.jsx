@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import CustomLink from "./CustomLink";
+import CustomLink from "./_customLink";
 function NavMobile() {
   const [open, setOpen] = useState(false);
   const navRef = useRef();

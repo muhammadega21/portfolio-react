@@ -9,12 +9,12 @@ import {
   Blog,
   Contact,
 } from "../components/Layouts/Home";
-import Portfolio from "../components/Layouts/Home/Portfolio";
+import Portfolio from "../components/Layouts/Home/_portfolio";
 import "aos/dist/aos.css";
 import { tabTitle } from "../utils/generalFunctions";
 import { useLocation, useParams } from "react-router-dom";
 import { userProfile } from "../services/publicService";
-import CircleLoading from "../components/Elements/CircleLoading";
+import CircleLoading from "../components/Elements/_circleLoading";
 
 function Home() {
   tabTitle("Portfolio | Home");

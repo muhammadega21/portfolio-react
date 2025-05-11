@@ -1,4 +1,4 @@
-import CustomLink from "./CustomLink";
+import CustomLink from "./_customLink";
 
 function NavWeb() {
   return (
