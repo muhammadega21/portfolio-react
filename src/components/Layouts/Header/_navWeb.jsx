@@ -2,7 +2,7 @@ import CustomLink from "./_customLink";
 
 function NavWeb() {
   return (
-    <nav className="hidden md:flex justify-between items-center px-[10%] h-[70px]  dark">
+    <nav className="hidden md:flex justify-between items-center px-[8%] h-[70px]  dark">
       <CustomLink to="/" className="logo">
         <img src="/images/logo.png" alt="Logo" />
         <h4>Portfolio</h4>
