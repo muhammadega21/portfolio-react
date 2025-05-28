@@ -70,13 +70,16 @@ function SinglePost() {
               data-aos="fade-up"
               data-aos-duration="600"
             >
-              <Link to="/blog" className="flex items-center gap-x-3">
+              <Link
+                to={username ? `/${username}/blog` : "/blog"}
+                className="flex items-center gap-x-3"
+              >
                 <div className="img">
                   <img src="/icons/left.svg" alt="left" />
                 </div>
                 <span className="text-xs font-bold">BACK TO BLOG</span>
               </Link>
-              <h2 className="mt-5 mb-10">{blog.title}</h2>
+              <h2 className="my-3 text-[40px]">{blog.title}</h2>
               <div className="flex justify-between items-center">
                 <span>
                   in {blog.category} by {blog.creator?.name}
@@ -97,19 +100,19 @@ function SinglePost() {
             data-aos="fade-up"
             data-aos-duration="600"
           >
-            <div>
+            <div className="border-b border-[#F3D1BF] pb-10">
               <img
-                className="w-full"
+                className="h-full max-w-[500px] mx-auto w-full object-cover rounded-md"
                 src={`${import.meta.env.VITE_STORAGE_URL}/${blog.blog_img}`}
                 alt={blog.title}
               />
             </div>
-            <div className="px-[15%] py-10 border-b border-[#F3D1BF]">
+            <div className="pt-5 pb-10 border-b border-[#F3D1BF]">
               <div
-                className="border-b border-[#F3D1BF] pb-10"
+                className="border-b border-[#F3D1BF] pb-10 "
                 dangerouslySetInnerHTML={{ __html: sanitizedContent }}
               />
-              <div className="pt-10 flex flex-col sm:flex-row items-center justify-between gap-5">
+              <div className="pt-10 flex flex-col sm:flex-row items-center justify-around gap-5">
                 <div className="flex flex-col sm:flex-row items-center gap-5">
                   <div className="img max-w-20 max-h-20 rounded-full overflow-hidden shadow-md">
                     <img
@@ -151,37 +154,41 @@ function SinglePost() {
         <h4 data-aos="fade-up" data-aos-duration="600">
           Related Articles
         </h4>
-        <div className="blog-subhero mt-10 flex justify-center gap-x-5 gap-y-10 flex-wrap">
-          {blogs.map((relatedBlog) => (
-            <Link
-              to={`/blog/${relatedBlog.slug}`}
-              className="card min-w-0 sm:min-w-[300px] max-w-[300px]"
-              key={relatedBlog.slug}
-              data-aos="fade-up"
-              data-aos-duration="600"
-            >
-              <div className="card-head w-full">
-                <img
-                  className=" rounded-md min-w-[370px] max-w-[370px] h-[225px] object-cover"
-                  src={`${import.meta.env.VITE_STORAGE_URL}/${
-                    relatedBlog.blog_img
-                  }`}
-                  alt={relatedBlog.title}
-                />
-              </div>
-              <div className="card-body mt-3">
-                <span className="text-xl">{relatedBlog.category}</span>
-                <h4 className="mb-3">{relatedBlog.title}</h4>
-                <span className="text-sm text-[#391400A3]">
-                  {new Date(relatedBlog.date).toLocaleDateString("id-ID", {
-                    day: "2-digit",
-                    month: "long",
-                    year: "numeric",
-                  })}
-                </span>
-              </div>
-            </Link>
-          ))}
+        <div className="blog-subhero mt-10 flex justify-start gap-x-5 gap-y-10 flex-wrap">
+          {blogs.length === 0 ? (
+            <p>No related articles found.</p>
+          ) : (
+            blogs.map((relatedBlog) => (
+              <Link
+                to={`/blog/${relatedBlog.slug}`}
+                className="card min-w-0 sm:min-w-[300px] max-w-[300px]"
+                key={relatedBlog.slug}
+                data-aos="fade-up"
+                data-aos-duration="600"
+              >
+                <div className="card-head w-full">
+                  <img
+                    className=" rounded-md min-w-[370px] max-w-[370px] h-[225px] object-cover"
+                    src={`${import.meta.env.VITE_STORAGE_URL}/${
+                      relatedBlog.blog_img
+                    }`}
+                    alt={relatedBlog.title}
+                  />
+                </div>
+                <div className="card-body mt-3">
+                  <span className="text-xl">{relatedBlog.category}</span>
+                  <h4 className="mb-3">{relatedBlog.title}</h4>
+                  <span className="text-sm text-[#391400A3]">
+                    {new Date(relatedBlog.date).toLocaleDateString("id-ID", {
+                      day: "2-digit",
+                      month: "long",
+                      year: "numeric",
+                    })}
+                  </span>
+                </div>
+              </Link>
+            ))
+          )}
         </div>
         <Service />
       </section>

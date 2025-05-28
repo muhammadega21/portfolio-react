@@ -66,7 +66,7 @@ function Blog() {
               data-aos="fade-up"
               data-aos-duration="600"
             >
-              <h1>Blog Artikel</h1>
+              <h1>Artikel Saya</h1>
               <p className="mt-3 w-full md:w-1/2 mx-auto">
                 Agency provides a full service range including technical skills,
                 design, business understanding.
@@ -84,9 +84,9 @@ function Blog() {
                     data-aos="fade-up"
                     data-aos-duration="600"
                   >
-                    <div className="card-head w-full">
+                    <div className="card-head w-full rounded-md overflow-hidden">
                       <img
-                        className="min-w-[370px] max-w-[370px] h-[225px] object-cover rounded-md"
+                        className="w-full h-[225px] object-center object-contain"
                         src={`${import.meta.env.VITE_STORAGE_URL}/${
                           blog.blog_img
                         }`}

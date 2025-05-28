@@ -8,12 +8,13 @@ function Service() {
         data-aos="fade-right"
         data-aos-duration="600"
       >
+        {/* <h3 className="leading-[64px] !text-white">Coming soon...</h3> */}
         <h2 className="leading-[64px] !text-white">
           Membantu Membangun Project Anda
         </h2>
         <p className="!text-[#FFFFFFA3]">
-          A digital agency is a business you hire to outsource your digital
-          marketing efforts, instead of handling in-house.
+          Menyediakan berbagai layanan lengkap termasuk keterampilan teknis,
+          desain, pemahaman bisnis.
         </p>
         <Link
           to={"/contact"}
