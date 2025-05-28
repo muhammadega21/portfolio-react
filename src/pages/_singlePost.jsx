@@ -129,16 +129,13 @@ function SinglePost() {
                     <span className="text-[#391400A3]">Editor</span>
                   </div>
                 </div>
-                <div className="social-media flex gap-3">
+                <div className="social-media flex gap-3 pointer-events-none">
                   {["facebook", "twitter", "instagram"].map((platform) => (
                     <div
                       key={platform}
                       className="bg-[#EF6D58] w-[48px] h-[48px] grid place-items-center rounded-full"
                     >
-                      <Link
-                        to="https://github.com/muhammadega21"
-                        target="blank"
-                      >
+                      <Link to="#" target="blank">
                         <img src={`/icons/${platform}.svg`} alt={platform} />
                       </Link>
                     </div>
