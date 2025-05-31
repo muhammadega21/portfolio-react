@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "aos/dist/aos.css";
 import BackToTop from "../components/Elements/_backToTop";
-import "./about.css";
+import "./blog.css";
 import Service from "../components/Fragments/_service";
 import Footer from "../components/Layouts/_footer";
 import { tabTitle } from "../utils/generalFunctions";

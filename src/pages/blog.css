@@ -1,1 +1,4 @@
-
+.blog-content {
+  font-family: "Segoe UI", "Arial Unicode MS", sans-serif;
+  white-space: pre-wrap;
+}

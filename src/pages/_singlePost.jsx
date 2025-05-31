@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 import BackToTop from "../components/Elements/_backToTop";
-import DOMPurify from "dompurify";
 import Service from "../components/Fragments/_service";
 import Footer from "../components/Layouts/_footer";
 import { useEffect, useState } from "react";
@@ -8,6 +7,7 @@ import { useParams } from "react-router-dom";
 import CircleLoading from "../components/Elements/_circleLoading";
 import { getBlogs, showBlog } from "../services/publicService";
 import NotFound from "./_notFound";
+import parse from "html-react-parser";
 
 function SinglePost() {
   const [blog, setBlog] = useState(null);
@@ -54,8 +54,6 @@ function SinglePost() {
     };
     fetchRelatedBlogs();
   }, [username, slug]);
-
-  const sanitizedContent = blog ? DOMPurify.sanitize(blog.content) : "";
 
   if (isLoading) {
     return (
@@ -122,10 +120,9 @@ function SinglePost() {
               />
             </div>
             <div className="pt-5 pb-10 border-b border-[#F3D1BF]">
-              <div
-                className="border-b border-[#F3D1BF] pb-10 "
-                dangerouslySetInnerHTML={{ __html: sanitizedContent }}
-              />
+              <div className="blog-content border-b border-[#F3D1BF] pb-10 ">
+                {parse(blog.content)}
+              </div>
               <div className="pt-10 flex flex-col sm:flex-row items-center justify-around gap-5">
                 <div className="flex flex-col sm:flex-row items-center gap-5">
                   <div className="img max-w-20 max-h-20 rounded-full overflow-hidden shadow-md">
@@ -202,7 +199,9 @@ function SinglePost() {
                   </Link>
                 ))
               ) : (
-                <p>No related articles found.</p>
+                <p data-aos="fade-up" data-aos-duration="600">
+                  No related articles found.
+                </p>
               )}
             </div>
             <Service />
