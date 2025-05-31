@@ -178,7 +178,7 @@ function SinglePost() {
                   >
                     <div className="card-head w-full">
                       <img
-                        className="rounded-md min-w-[370px] max-w-[370px] h-[225px] object-cover"
+                        className="rounded-md min-w-[300px] max-w-[300px] h-[225px] object-cover"
                         src={`${import.meta.env.VITE_STORAGE_URL}/${
                           relatedBlog.blog_img
                         }`}
