@@ -32,7 +32,7 @@ function Blog({ blogs, username }) {
               ? `/blog/${username}/${blogs[0]?.slug}`
               : `/blog/${blogs[0]?.slug}`
           }
-          className="card card-hero w-full min-w-0 md:min-w-[770px] pe-0 md:pe-16"
+          className="card card-hero w-full min-w-0 md:min-w-[770px] pe-0 md:pe-16 mb-6"
         >
           <div className="card-head ">
             <img
@@ -41,7 +41,7 @@ function Blog({ blogs, username }) {
               className="w-full object-center object-cover rounded-md"
             />
           </div>
-          <div className="card-body">
+          <div className="card-body leading-[30px]">
             <p>{blogs[0]?.category}</p>
             <h4>{blogs[0]?.title}</h4>
             <span>
@@ -62,17 +62,17 @@ function Blog({ blogs, username }) {
                     ? `/blog/${username}/${blog.slug}`
                     : `/blog/${blog.slug}`
                 }
-                className="card"
+                className="card block mb-6"
                 key={index}
               >
-                <div className="card-head">
+                <div className="card-head ">
                   <img
                     src={`${import.meta.env.VITE_STORAGE_URL}/${blog.blog_img}`}
                     alt={blog.title}
                     className="w-full object-center object-cover rounded-md"
                   />
                 </div>
-                <div className="card-body">
+                <div className="card-body leading-[25px]">
                   <p>{blog.category}</p>
                   <h4>{blog.title}</h4>
                   <span>
