@@ -10,13 +10,18 @@ const validateUsername = (username) => {
 // Handler error yang konsisten
 const handleApiError = (error) => {
   console.error("API Error:", error);
+  const status = error.response?.status || 500;
+  const isUserNotFound =
+    status === 404 && error.response?.data?.message === "User Not Found";
+
   return {
     error: {
-      status: error.response?.status || 500,
+      status,
       message: error.response?.data?.message || "Internal server error",
       details: error.response?.data?.details || null,
     },
     data: null,
+    isUserNotFound, // Flag khusus untuk user not found
   };
 };
 
@@ -58,6 +63,21 @@ export const getBlogs = async (username) => {
 export const showBlog = async (slug) => {
   try {
     const response = await apiClient.get(`/user-blogs/post/${slug}`);
+    return response.data;
+  } catch (err) {
+    return handleApiError(err);
+  }
+};
+
+export const blogPageIntro = async (username) => {
+  const sanitizedUsername = validateUsername(username);
+
+  try {
+    const endpoint = sanitizedUsername
+      ? `/article/${sanitizedUsername}`
+      : "/article/muhammad-ega-dermawan";
+
+    const response = await apiClient.get(endpoint);
     return response.data;
   } catch (err) {
     return handleApiError(err);

@@ -7,10 +7,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CircleLoading from "../components/Elements/_circleLoading";
 import { getBlogs, showBlog } from "../services/publicService";
+import NotFound from "./_notFound";
 
 function SinglePost() {
   const [blog, setBlog] = useState(null);
-  const [blogs, setBlogs] = useState([]);
+  const [relatedBlogs, setRelatedBlogs] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   const location = useLocation();
@@ -34,35 +35,48 @@ function SinglePost() {
     };
     fetchBlog();
   }, [slug]);
+  console.log(blog);
 
   useEffect(() => {
-    const fetchBlogs = async () => {
+    const fetchRelatedBlogs = async () => {
       try {
         setIsLoading(true);
         const response = await getBlogs(username);
         const filteredBlogs = response.data.filter(
           (blog) => blog.slug !== slug
         );
-        setBlogs(filteredBlogs.slice(0, 6));
+        setRelatedBlogs(filteredBlogs.slice(0, 6));
       } catch (error) {
-        console.error("Error fetching blogs:", error);
+        console.error("Error fetching related blogs:", error);
       } finally {
         setIsLoading(false);
       }
     };
-    fetchBlogs();
+    fetchRelatedBlogs();
   }, [username, slug]);
 
   const sanitizedContent = blog ? DOMPurify.sanitize(blog.content) : "";
 
+  if (isLoading) {
+    return (
+      <div className="w-full h-screen flex items-center justify-center">
+        <CircleLoading />
+      </div>
+    );
+  }
+
+  if (!blog) {
+    return (
+      <div className="w-full h-screen">
+        <NotFound />
+      </div>
+    );
+  }
+
   return (
     <div className="w-full overflow-x-hidden">
       <BackToTop top="" />
-      {isLoading ? (
-        <div className="w-full h-screen flex items-center justify-center">
-          <CircleLoading />
-        </div>
-      ) : blog ? (
+      {blog && (
         <>
           <section className="pt-16 hero-head background-light">
             <div
@@ -82,10 +96,10 @@ function SinglePost() {
               <h2 className="my-3 text-[40px]">{blog.title}</h2>
               <div className="flex justify-between items-center">
                 <span>
-                  in {blog.category} by {blog.creator?.name}
+                  in <span className="underline">{blog.category}</span> by{" "}
+                  {blog.creator?.name}
                 </span>
                 <span>
-                  Date{" "}
                   {new Date(blog.date).toLocaleDateString("id-ID", {
                     day: "2-digit",
                     month: "long",
@@ -144,54 +158,60 @@ function SinglePost() {
               </div>
             </div>
           </section>
+          <section className="px-[5%] sm:px-[15%] mb-10">
+            <h4 data-aos="fade-up" data-aos-duration="600">
+              Related Articles
+            </h4>
+            <div className="blog-subhero mt-10 flex justify-start gap-x-5 gap-y-10 flex-wrap">
+              {relatedBlogs.length > 0 ? (
+                relatedBlogs.map((relatedBlog) => (
+                  <Link
+                    to={
+                      username
+                        ? `/${username}/blog/${relatedBlog.slug}`
+                        : `/blog/${relatedBlog.slug}`
+                    }
+                    className="card min-w-0 sm:min-w-[300px] max-w-[300px]"
+                    key={relatedBlog.slug}
+                    data-aos="fade-up"
+                    data-aos-duration="600"
+                  >
+                    <div className="card-head w-full">
+                      <img
+                        className="rounded-md min-w-[370px] max-w-[370px] h-[225px] object-cover"
+                        src={`${import.meta.env.VITE_STORAGE_URL}/${
+                          relatedBlog.blog_img
+                        }`}
+                        alt={relatedBlog.title}
+                      />
+                    </div>
+                    <div className="card-body mt-3">
+                      <span className="text-xl">{relatedBlog.category}</span>
+                      <h4 className="mb-3">{relatedBlog.title}</h4>
+                      <span className="text-sm text-[#391400A3]">
+                        {new Date(relatedBlog.date).toLocaleDateString(
+                          "id-ID",
+                          {
+                            day: "2-digit",
+                            month: "long",
+                            year: "numeric",
+                          }
+                        )}
+                      </span>
+                    </div>
+                  </Link>
+                ))
+              ) : (
+                <p>No related articles found.</p>
+              )}
+            </div>
+            <Service />
+          </section>
+          <div className="py-10">
+            <Footer copyColor="#391400A3" page="Blog" borderColor="#F3D1BF" />
+          </div>
         </>
-      ) : null}
-
-      <section className="px-[5%] sm:px-[15%] mb-10">
-        <h4 data-aos="fade-up" data-aos-duration="600">
-          Related Articles
-        </h4>
-        <div className="blog-subhero mt-10 flex justify-start gap-x-5 gap-y-10 flex-wrap">
-          {blogs.length === 0 ? (
-            <p>No related articles found.</p>
-          ) : (
-            blogs.map((relatedBlog) => (
-              <Link
-                to={`/blog/${relatedBlog.slug}`}
-                className="card min-w-0 sm:min-w-[300px] max-w-[300px]"
-                key={relatedBlog.slug}
-                data-aos="fade-up"
-                data-aos-duration="600"
-              >
-                <div className="card-head w-full">
-                  <img
-                    className=" rounded-md min-w-[370px] max-w-[370px] h-[225px] object-cover"
-                    src={`${import.meta.env.VITE_STORAGE_URL}/${
-                      relatedBlog.blog_img
-                    }`}
-                    alt={relatedBlog.title}
-                  />
-                </div>
-                <div className="card-body mt-3">
-                  <span className="text-xl">{relatedBlog.category}</span>
-                  <h4 className="mb-3">{relatedBlog.title}</h4>
-                  <span className="text-sm text-[#391400A3]">
-                    {new Date(relatedBlog.date).toLocaleDateString("id-ID", {
-                      day: "2-digit",
-                      month: "long",
-                      year: "numeric",
-                    })}
-                  </span>
-                </div>
-              </Link>
-            ))
-          )}
-        </div>
-        <Service />
-      </section>
-      <div className="py-10">
-        <Footer copyColor="#391400A3" page="Blog" borderColor="#F3D1BF" />
-      </div>
+      )}
     </div>
   );
 }

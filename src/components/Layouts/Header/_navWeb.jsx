@@ -10,13 +10,19 @@ function NavWeb() {
       <div className="nav-link">
         <ul className="flex items-center gap-[2rem] lg:gap-[5rem]">
           <li>
-            <CustomLink to="/about">About</CustomLink>
+            <CustomLink to="/about" className={"pointer-events-none"}>
+              About
+            </CustomLink>
           </li>
           <li>
-            <CustomLink to="/layanan">Services</CustomLink>
+            <CustomLink to="/layanan" className={"pointer-events-none"}>
+              Services
+            </CustomLink>
           </li>
           <li>
-            <CustomLink to="/portfolio">Portfolio</CustomLink>
+            <CustomLink to="/portfolio" className={"pointer-events-none"}>
+              Portfolio
+            </CustomLink>
           </li>
           <li>
             <CustomLink to="/blog">Blog</CustomLink>
@@ -24,7 +30,9 @@ function NavWeb() {
         </ul>
       </div>
       <div className="contact-btn">
-        <CustomLink to="/contact">CONTACT</CustomLink>
+        <CustomLink to="/contact" className={"pointer-events-none"}>
+          CONTACT
+        </CustomLink>
       </div>
     </nav>
   );

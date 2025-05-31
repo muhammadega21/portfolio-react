@@ -74,17 +74,29 @@ function NavMobile() {
       <div className="nav-link flex flex-col w-full">
         <ul className="w-full">
           <li>
-            <CustomLink to={"/about"} onClick={handleLinkClick}>
+            <CustomLink
+              to={"/about"}
+              className={"pointer-events-none"}
+              onClick={handleLinkClick}
+            >
               About
             </CustomLink>
           </li>
           <li>
-            <CustomLink to={"/layanan"} onClick={handleLinkClick}>
+            <CustomLink
+              to={"/layanan"}
+              className={"pointer-events-none"}
+              onClick={handleLinkClick}
+            >
               Services
             </CustomLink>
           </li>
           <li>
-            <CustomLink to={"/portfolio"} onClick={handleLinkClick}>
+            <CustomLink
+              to={"/portfolio"}
+              className={"pointer-events-none"}
+              onClick={handleLinkClick}
+            >
               Portfolio
             </CustomLink>
           </li>
@@ -97,7 +109,7 @@ function NavMobile() {
         <div className="contact-btn my-3 w-full">
           <CustomLink
             to={"/contact"}
-            className="w-full block text-center"
+            className="w-full block text-center pointer-events-none"
             onClick={handleLinkClick}
           >
             CONTACT

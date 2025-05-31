@@ -7,7 +7,7 @@ import Footer from "../components/Layouts/_footer";
 import { tabTitle } from "../utils/generalFunctions";
 import { useLocation, useParams } from "react-router-dom";
 import CustomLink from "../components/Layouts/Header/_customLink";
-import { getBlogs } from "../services/publicService";
+import { blogPageIntro, getBlogs } from "../services/publicService";
 import CircleLoading from "../components/Elements/_circleLoading";
 
 function Blog() {
@@ -15,6 +15,7 @@ function Blog() {
   const [displayedBlogs, setDisplayedBlogs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [pageIntro, setPageIntro] = useState(null);
 
   const username = useParams().username;
   const initialDisplayCount = 6;
@@ -30,11 +31,15 @@ function Blog() {
     const fetchBlogs = async () => {
       try {
         setIsLoading(true);
-        const response = await getBlogs(username);
-        setBlogs(response.data);
-        setDisplayedBlogs(response.data.slice(0, initialDisplayCount));
+        const response = await Promise.all([
+          blogPageIntro(username),
+          getBlogs(username),
+        ]);
+        setPageIntro(response[0].page_intro);
+        setBlogs(response[1].data);
+        setDisplayedBlogs(response[1].data.slice(0, initialDisplayCount));
       } catch (error) {
-        console.error("Error fetching blogs:", error);
+        console.error("Error fetching blog page intro and blogs:", error);
       } finally {
         setIsLoading(false);
       }
@@ -68,8 +73,9 @@ function Blog() {
             >
               <h1>Artikel Saya</h1>
               <p className="mt-3 w-full md:w-1/2 mx-auto">
-                Agency provides a full service range including technical skills,
-                design, business understanding.
+                {pageIntro
+                  ? pageIntro
+                  : "Belum ada intro. Silakan update di admin."}
               </p>
             </div>
           </section>

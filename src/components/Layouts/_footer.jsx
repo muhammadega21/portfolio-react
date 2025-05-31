@@ -16,7 +16,7 @@ function Footer({ page, borderColor, copyColor }) {
           <p>Design</p>
           <p>Development</p>
           <p>Marketing</p>
-          <Link to={"service"}>See More</Link>
+          <Link to={"#"}>See More</Link>
         </div>
         <div className="footer-socialMedia flex gap-3 pointer-events-none">
           <div className="social-wrapper ">

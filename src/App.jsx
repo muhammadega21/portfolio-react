@@ -10,6 +10,12 @@ import {
   SinglePost,
   NotFound,
 } from "./pages";
+import { useUserCheck } from "./hooks/userCheck";
+
+const UserRoute = ({ element: Element }) => {
+  useUserCheck();
+  return <Element />;
+};
 
 function App() {
   return (
@@ -19,26 +25,27 @@ function App() {
         <Routes>
           {/* Default routes without username */}
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/layanan" element={<Layanan />} />
-          <Route path="/portfolio" element={<Portfolio />} />
+          {/* <Route path="/about" element={<About />} /> */}
+          {/* <Route path="/layanan" element={<Layanan />} /> */}
+          {/* <Route path="/portfolio" element={<Portfolio />} /> */}
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<SinglePost />} />
-          <Route path="/contact" element={<Contact />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
 
           {/* Routes with username - more specific paths */}
           <Route path="/:username">
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="layanan" element={<Layanan />} />
-            <Route path="portfolio" element={<Portfolio />} />
+            <Route index element={<UserRoute element={Home} />} />
+            {/* <Route path="about" element={<About />} /> */}
+            {/* <Route path="layanan" element={<Layanan />} /> */}
+            {/* <Route path="portfolio" element={<Portfolio />} /> */}
             <Route path="blog" element={<Blog />} />
             <Route path="blog/:slug" element={<SinglePost />} />
-            <Route path="contact" element={<Contact />} />
+            {/* <Route path="contact" element={<Contact />} /> */}
           </Route>
 
           {/* 404 Not Found */}
           <Route path="*" element={<NotFound />} />
+          <Route path="/404" element={<NotFound />} />
         </Routes>
       </main>
     </Router>
