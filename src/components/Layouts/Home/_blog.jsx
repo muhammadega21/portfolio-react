@@ -73,7 +73,7 @@ function Blog({ blogs, username }) {
                   />
                 </div>
                 <div className="card-body leading-[35px]">
-                  <p>{blog.category}</p>
+                  <p className="text-base">{blog.category}</p>
                   <h4>{blog.title}</h4>
                   <span>
                     {new Date(blog.date).toLocaleDateString("id-ID", {
