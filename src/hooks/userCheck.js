@@ -15,7 +15,6 @@ export const useUserCheck = () => {
           navigate("/404", { replace: true });
         }
       } else if (["about", "contact"].includes(username)) {
-        // Langsung redirect ke 404 jika path seperti /about atau /contact
         navigate("/404", { replace: true });
       }
     };

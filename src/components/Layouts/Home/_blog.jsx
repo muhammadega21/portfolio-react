@@ -41,7 +41,7 @@ function Blog({ blogs, username }) {
               className="w-full object-center object-cover rounded-md"
             />
           </div>
-          <div className="card-body leading-[30px]">
+          <div className="card-body leading-[45px]">
             <p>{blogs[0]?.category}</p>
             <h4>{blogs[0]?.title}</h4>
             <span>
@@ -55,7 +55,7 @@ function Blog({ blogs, username }) {
         </Link>
         <div>
           {blogs.length > 1 &&
-            blogs.slice(1).map((blog, index) => (
+            blogs.slice(1, 4).map((blog, index) => (
               <Link
                 to={
                   username
@@ -72,7 +72,7 @@ function Blog({ blogs, username }) {
                     className="w-full object-center object-cover rounded-md"
                   />
                 </div>
-                <div className="card-body leading-[25px]">
+                <div className="card-body leading-[35px]">
                   <p>{blog.category}</p>
                   <h4>{blog.title}</h4>
                   <span>
